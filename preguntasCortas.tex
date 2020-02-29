@@ -4,8 +4,8 @@ Las preguntas cortas consistirán en refutar sentencias falsas en base a vuestro
 
 \subsubsection*{1. Las normas de procesos para la construcción del software sólo describen procesos que tienen por objetivo el desarrollo de código ejecutable.}
 \textit{Todas las normas vistas describen procesos incluidos en todo el ciclo de vida del software. Las normas ISO 12207 e ISO/IEC 15504 incluyen entre sus procesos principales los de adquisición y suministro (gestionan la compra-venta); también incluyen los procesos de soporte (describen tareas de apoyo, no de construcción) y los de la organización, que ni siquiera tienen que ver con el desarrollo de un proyecto software concreto. De hecho la codificación se tratar sólo como una actividad del proceso de desarrollo en estas normas.
-\\
-También se puede hacer el mismo razonamiento con la norma IEEE 1074 que nos proporciona 4 secciones lógicas de las que sólo una tiene que ver con el desarrollo. Las otras tres tienen que ver con la selección del ciclo de vida, la gestión del proyecto y los procesos integrales, vinculados a asegurar la terminación y calidad de los procesos.}
+    \\
+    También se puede hacer el mismo razonamiento con la norma IEEE 1074 que nos proporciona 4 secciones lógicas de las que sólo una tiene que ver con el desarrollo. Las otras tres tienen que ver con la selección del ciclo de vida, la gestión del proyecto y los procesos integrales, vinculados a asegurar la terminación y calidad de los procesos.}
 
 \subsubsection*{2. Sólo el SEI americano ha mostrado interés en la generación de normas para la Ingeniería del Software debido a su carácter académico.}
 \textit{Como se ha discutido indirectamente en la pregunta anterior, las normas del IEEE y la ISO/IEC acreditan la preocupación de otras instituciones, independientes del SEI, por la formalización de estas normas. Además estos estándares, como se demuestra en la explicación del CMMI, están orientados a su aplicación en las empresas a las que deben proporcionar un marco válido que evite el desarrollo ad hoc de aplicaciones.}
@@ -21,21 +21,21 @@ También se puede hacer el mismo razonamiento con la norma IEEE 1074 que nos pro
 
 \subsubsection*{6. La única cualidad importante del analista es ser persuasivo para convencer al cliente de que el software que le desarrollamos era el que necesitaba.}
 \textit{En tanto que la persuasión es cualidad importante y forma parte de una de las muchas dotes comunicativas que debe tener un analista, no es suficiente.
-\\
-Un analista debe ser capaz de comunicar y de extraer información de los clientes.\\
-Además, valiéndose de sus conocimientos técnicos y experiencia en el campo de la ingeniería del software, ser capaz de traducir ideas vagas de necesidades de software en un conjunto concreto de funciones y restricciones.
+    \\
+    Un analista debe ser capaz de comunicar y de extraer información de los clientes.\\
+    Además, valiéndose de sus conocimientos técnicos y experiencia en el campo de la ingeniería del software, ser capaz de traducir ideas vagas de necesidades de software en un conjunto concreto de funciones y restricciones.
 }
 
 \subsubsection*{7. La especificación es un documento escrito en lenguaje natural que será tanto mejor cuanto más largo y enrevesado sea.}
 \textit{Una especificación es un documento descriptivo, que debe reflejar de forma clara y sencilla el aspecto del software que esté tratando.\\
-Por lo tanto, se deberá evitar el uso del lenguaje natural (puesto que puede resultar vago y ambiguo) y, en su defecto, hacer uso de modelos, diagramas y herramientas que reflejen objetivamente el software.\\
-Por otro lado, los documentos generados deben estar estructurados en particiones, permitiéndonos detectar cualquier redundancia y facilitando su modificación y lectura.
+    Por lo tanto, se deberá evitar el uso del lenguaje natural (puesto que puede resultar vago y ambiguo) y, en su defecto, hacer uso de modelos, diagramas y herramientas que reflejen objetivamente el software.\\
+    Por otro lado, los documentos generados deben estar estructurados en particiones, permitiéndonos detectar cualquier redundancia y facilitando su modificación y lectura.
 }
 
 \subsubsection*{8. Un buen modelo es aquel que, sin ayuda de otros, representa todos los aspectos de un sistema.}
 \textit{Debido a la complejidad de los sistemas informáticos, no es posible elaborar un modelo comprensible para un ingeniero que represente todos los aspectos de un sistema de forma clara y concisa.
-\\
-Es por ello que debemos optar por una estrategia fragmentada, representando el sistema mediante múltiples modelos que colaboren entre sí y nos permitan reflejar con precisión cada uno de los aspectos del sistema.
+    \\
+    Es por ello que debemos optar por una estrategia fragmentada, representando el sistema mediante múltiples modelos que colaboren entre sí y nos permitan reflejar con precisión cada uno de los aspectos del sistema.
 }
 
 \subsubsection*{9. Cada DFD y DFC tienen los mismos procesos y almacenes pero jamás se relacionan ya que uno representa la función y el otro el comportamiento.} %No me gusta la argumentación que efrén propone para esta respuesta. recomendaría su revisión y reescritura.
@@ -57,29 +57,29 @@ Es por ello que debemos optar por una estrategia fragmentada, representando el s
 
 \subsubsection*{11. ¿Cuáles son los puntos de vista desde los que podemos modelar el software? Sitúa en una tabla que tenga los puntos de vista tanto en las filas como en las columnas, y las metodologías o técnicas que conozcas para modelar}
 \begin{table}[ht]
-\centering
-\resizebox{\textwidth}{!}{
-    \begin{tabular}{c|l|l|l|} \cline{2-4}
-        &   \multicolumn{1}{c|}{\textbf{Información}} &   \multicolumn{1}{c}{\textbf{Función}} &   \multicolumn{1}{|c|}{\textbf{Tiempo}}   \\ \hline
-        
-        \multicolumn{1}{|c|}{\multirow{4}{*}{\textbf{Información}}} &   D. entidad--relación        &   &   \\
-        \multicolumn{1}{|c|}{}    &   D. de estructura de datos   &   &   \\
-        \multicolumn{1}{|c|}{}    &   Matriz entidad/entidad      &   &   \\
-        \multicolumn{1}{|c|}{}    &   Diagramas de clases         &   &   \\ \hline
-        
-        \multicolumn{1}{|c|}{\multirow{7}{*}{\textbf{Función}}}    & D. de flujo de datos  &   D. de flujo de datos   &    \\
-        \multicolumn{1}{|c|}{}    &   Matriz función/entidad  & D. de casos de uso    &   \\
-        \multicolumn{1}{|c|}{}    &   Diagrama de clases  &   D.de estructura de datos    &   \\
-        \multicolumn{1}{|c|}{}    &   D. de colaboración  &   Tarjetas CRC    &   \\
-        \multicolumn{1}{|c|}{}    &   &   D. de componentes   &   \\
-        \multicolumn{1}{|c|}{}    &   &   D. de despliegue    &   \\
-        \multicolumn{1}{|c|}{}    &   &   D. de actividad &   \\ \hline
-        
-        \multicolumn{1}{ |c| }{\multirow{4}{*}{\textbf{Tiempo}}} &   H\textordfeminine\ de vida de la entidad &   Redes de Petri  &   D. de flujo de control \\
-        \multicolumn{1}{|c|}{}    &   D. de estados   &   D. de estados   &   D. de estados   \\
-        \multicolumn{1}{|c|}{}    &   D. de secuencia &   D. de secuencia &   \\
-        \multicolumn{1}{|c|}{}    &   &   D. de actividad &   \\ \hline
-    \end{tabular}
+    \centering
+    \resizebox{\textwidth}{!}{
+        \begin{tabular}{c|l|l|l|} \cline{2-4}
+                                                                        & \multicolumn{1}{c|}{\textbf{Información}} & \multicolumn{1}{c}{\textbf{Función}} & \multicolumn{1}{|c|}{\textbf{Tiempo}} \\ \hline
+
+            \multicolumn{1}{|c|}{\multirow{4}{*}{\textbf{Información}}} & D. entidad--relación                      &                                      &                                       \\
+            \multicolumn{1}{|c|}{}                                      & D. de estructura de datos                 &                                      &                                       \\
+            \multicolumn{1}{|c|}{}                                      & Matriz entidad/entidad                    &                                      &                                       \\
+            \multicolumn{1}{|c|}{}                                      & Diagramas de clases                       &                                      &                                       \\ \hline
+
+            \multicolumn{1}{|c|}{\multirow{7}{*}{\textbf{Función}}}     & D. de flujo de datos                      & D. de flujo de datos                 &                                       \\
+            \multicolumn{1}{|c|}{}                                      & Matriz función/entidad                    & D. de casos de uso                   &                                       \\
+            \multicolumn{1}{|c|}{}                                      & Diagrama de clases                        & D.de estructura de datos             &                                       \\
+            \multicolumn{1}{|c|}{}                                      & D. de colaboración                        & Tarjetas CRC                         &                                       \\
+            \multicolumn{1}{|c|}{}                                      &                                           & D. de componentes                    &                                       \\
+            \multicolumn{1}{|c|}{}                                      &                                           & D. de despliegue                     &                                       \\
+            \multicolumn{1}{|c|}{}                                      &                                           & D. de actividad                      &                                       \\ \hline
+
+            \multicolumn{1}{ |c| }{\multirow{4}{*}{\textbf{Tiempo}}}    & H\textordfeminine\ de vida de la entidad  & Redes de Petri                       & D. de flujo de control                \\
+            \multicolumn{1}{|c|}{}                                      & D. de estados                             & D. de estados                        & D. de estados                         \\
+            \multicolumn{1}{|c|}{}                                      & D. de secuencia                           & D. de secuencia                      &                                       \\
+            \multicolumn{1}{|c|}{}                                      &                                           & D. de actividad                      &                                       \\ \hline
+        \end{tabular}
     }
     \caption{Métodos de modelado según la dimensión del sistema que modelan}
     \label{tab:respuesta}
@@ -87,18 +87,18 @@ Es por ello que debemos optar por una estrategia fragmentada, representando el s
 
 \subsubsection*{12. ¿Qué es un stakeholder? Pon dos ejemplos en un contexto determinado.}
 \textit{Personal involucrado en el proyecto, incluyendo a los usuarios finales, los ingenieros trabajando en el proyecto, el administrador de negocio y los expertos del dominio del sistema. Podemos distinguir entre involucrados, afectados e implicados.
-\\
-En el desarrollo de una aplicación para ENSO, el profesor Taboada se ve involucrado, mientras que el alumno se ve comprometido.
+    \\
+    En el desarrollo de una aplicación para ENSO, el profesor Taboada se ve involucrado, mientras que el alumno se ve comprometido.
 }
 
 \subsubsection*{13. Las líneas base no están relacionada con los elementos de configuración del software.}
 \textit{ La línea base representa la configuración vigente y aprobada y sólo puede ser modificada a través de un procedimiento formal de cambios.
-\\
-Está conformada por un conjunto de elementos de configuración, acabados y formalmente aprobados, designados y fijados en un momento específico del ciclo de vida.}
+    \\
+    Está conformada por un conjunto de elementos de configuración, acabados y formalmente aprobados, designados y fijados en un momento específico del ciclo de vida.}
 
 \subsubsection*{14. La documentación de las pruebas no es un elemento de configuración.}
 \textit{Cualquier producto de trabajo creado como parte del proceso de ingeniería del software, tanto final como intermedio y tanto entregable al cliente como interno del proyecto, cuyo cambio puede resultar crítico para el buen desarrollo del proyecto y susceptible de ser gestionado es un elemento de configuración.\\
-Esto incluye la documentación de las pruebas.
+    Esto incluye la documentación de las pruebas.
 }
 
 \subsubsection*{15. Define lo que es un plan de gestión de la configuración.}
@@ -106,13 +106,13 @@ Esto incluye la documentación de las pruebas.
 
 \subsubsection*{16. El diagrama de flujo de datos (DFD) representa el comportamiento del sistema desde un punto de vista funcional.}
 \textit{Los DFD describen qué funciones son las que realiza el sistema, qué interacciones se producen entre estas funciones así como las transformaciones de datos.
-\\
-Sin embargo, no describen cómo se comporta el sistema ni indican en ningún momento cuándo realiza una función ni la secuencia que se sigue.
+    \\
+    Sin embargo, no describen cómo se comporta el sistema ni indican en ningún momento cuándo realiza una función ni la secuencia que se sigue.
 }
 
 \subsubsection*{17. Los procesos de soporte solo sirven para entorpecer el desarrollo software.}
 \textit{Los procesos de soporte sirven de apoyo a los procesos principales y tienen como objetivo evitar la aparición de problemas crónicos asociados al desarrollo del software.\\
-Mediante procesos como la documentación, el control del cambio, la auditoría o el aseguramiento de la calidad, se puede mejorar la calidad de un producto, facilitar su mantenimiento y reutilización y por ende, mejorar la satisfacción del cliente.
+    Mediante procesos como la documentación, el control del cambio, la auditoría o el aseguramiento de la calidad, se puede mejorar la calidad de un producto, facilitar su mantenimiento y reutilización y por ende, mejorar la satisfacción del cliente.
 }
 
 \subsubsection*{18. Los requisitos de dominio se refieren al entorno y no tienen que ver con los requisitos funcionales.}
@@ -126,22 +126,22 @@ Mediante procesos como la documentación, el control del cambio, la auditoría o
 
 \subsubsection*{19. El único momento en el que se hace uso un DFC es durante el análisis del sistema.}
 \textit{El DFC es un diagrama permite la representación del sistema en múltiples niveles de abstracción y por lo tanto se utiliza cuando resulte útil para el desarrollo de software.
-\\
-Adicionalmente, no en todos los ciclos de vida se realizará el diseño en la fase de análisis del sistema ya que, por ejemplo en cascada es más probable que su realización estuviese ligada a la fase de diseño.
-\\
-Finalmente, el DFC se puede elaborar además en la fase de análisis de software. 
+    \\
+    Adicionalmente, no en todos los ciclos de vida se realizará el diseño en la fase de análisis del sistema ya que, por ejemplo en cascada es más probable que su realización estuviese ligada a la fase de diseño.
+    \\
+    Finalmente, el DFC se puede elaborar además en la fase de análisis de software.
 }
 
 \subsubsection*{20. La verificación y la validación no tienen nada que ver.}
 \textit{Si bien su enfoque es distinto, tanto la verificación como la validación son procesos de evaluación de un sistema o de uno de sus componentes.\\ %a partir de aquí "lorenzada"
-La verificación determina si los productos de una fase dada satisfacen la condiciones impuestas al principio de dicha fase.\\
-La validación determina si satisface los requisitos especificados.
+    La verificación determina si los productos de una fase dada satisfacen la condiciones impuestas al principio de dicha fase.\\
+    La validación determina si satisface los requisitos especificados.
 }
 \subsubsection*{21. La realización de un proceso es completamente rígida, cuando un proceso está institucionalizado nunca se deja de hacer a pesar del estrés del proyecto.}
 % Página 6. explicar por qué es adaptable
 \textit{Una característica de los procesos es que es un conjunto de actividades adaptables a las necesidades del que lo utiliza.
-\\
-Por lo tanto, puede llegar a suceder que en una situación de estrés y dadas las necesidades del proyecto que no se pueda completar uno de los procesos planificados y se prioricen otros.
+    \\
+    Por lo tanto, puede llegar a suceder que en una situación de estrés y dadas las necesidades del proyecto que no se pueda completar uno de los procesos planificados y se prioricen otros.
 }
 
 \subsubsection*{22. La gestión de riesgos solo se realiza en una determinada fase del proceso de análisis de riesgos.}
@@ -152,15 +152,15 @@ Por lo tanto, puede llegar a suceder que en una situación de estrés y dadas la
 \subsubsection*{23. La programación extrema está englobada dentro del modelado ágil.}
 % Páginas 17 y 18 Modelado ágil ≠ metodología ágil.
 \textit{No se debe confundir el modelado ágil con las metodologías ágiles.
-\\
-La programación extrema forma parte de las metodologías o desarrollos ágiles, que renuncian a utilizar modelos perfectos y centran sus esfuerzos en presentar incrementos software ejecutable.
-\\
-Dentro de las metodologías ágiles podemos mencionar el modelado ágil (que es una colección de buenas prácticas) o la programación extrema.
+    \\
+    La programación extrema forma parte de las metodologías o desarrollos ágiles, que renuncian a utilizar modelos perfectos y centran sus esfuerzos en presentar incrementos software ejecutable.
+    \\
+    Dentro de las metodologías ágiles podemos mencionar el modelado ágil (que es una colección de buenas prácticas) o la programación extrema.
 }
 \subsubsection*{24. Es necesaria una reunión TFEA con el fin de realizar un análisis de requisitos adecuado.}
 \textit{El TFEA es un conjunto de técnicas que facilitan el análisis de requisitos, y pueden ser utilizadas como una metodología para la generación de un buen análisis de requisitos.
-\\
-Sin embargo, no es necesario seguir estas técnicas y menos aun realizar una reunión ya que se pueden obtener los requisitos realizando estudios de documentación, cuestionarios o elaborando prototipos.}
+    \\
+    Sin embargo, no es necesario seguir estas técnicas y menos aun realizar una reunión ya que se pueden obtener los requisitos realizando estudios de documentación, cuestionarios o elaborando prototipos.}
 
 \subsubsection*{25. El DFD de nivel 0 recibe el nombre de Diagrama 0.}
 \begin{itemize}
@@ -175,24 +175,24 @@ Sin embargo, no es necesario seguir estas técnicas y menos aun realizar una reu
 
 \subsubsection*{27. La calidad del software solo viene determinada por el costo y el tiempo que se le dedica al proyecto.} %modo rabada
 \textit{El alcance de un proyecto es la suma de todos los productos y sus requisitos o características es otro factor que debemos considerar.
-El coste, el tiempo y el alcance son limitantes de la calidad, lo cual no es lo mismo que determinantes.\\
-Para un mismo tiempo, coste y alcance la aplicación de procesos de ingeniería probados, bien definidos y siguiendo los estándares repercutirá muy positivamente en la calidad. También podríamos hablar de la capacidad del personal involucrado, así como la experiencia y la aplicación de buenas practicas a nivel de programación.
+    El coste, el tiempo y el alcance son limitantes de la calidad, lo cual no es lo mismo que determinantes.\\
+    Para un mismo tiempo, coste y alcance la aplicación de procesos de ingeniería probados, bien definidos y siguiendo los estándares repercutirá muy positivamente en la calidad. También podríamos hablar de la capacidad del personal involucrado, así como la experiencia y la aplicación de buenas practicas a nivel de programación.
 }
 \subsubsection*{28. El nivel de madurez máximo que una empresa puede alcanzar en un proceso es el de en optimización, para ello debe alcanzar los niveles previos y cumplir las metas necesarias dentro de los procesos relacionados.}
 \textit{Según el CMMI, se puede medir la madurez con 6 niveles, que son los siguientes: Nivel 0 N/A, Nivel 1 Inicial, Nivel 2 Gestionado, Nivel 3 Definido, Nivel 4 cuantitativamente gestionado y Nivel 5: en optimización, sin embargo, no es necesario cumplir las metas de los procesos relacionados }% mejor? donde pone esto exactamente. cuernos no lo puse no explicitamente te dice que el nivel de capacidad continou es para cada uno de los procesos, podemos añadir independientemente
 % arreglado
 \subsubsection*{29. La mejor forma de optimizar un proceso en CMMI es realizar una institucionalización del mismo.}
 \textit{El CMMI es un modelo que centra su evaluación en las áreas del proceso y puede ser aplicado de dos maneras:
-\begin{itemize}
-    \item Siguiendo un modelo continuo, que define el nivel de capacidad de cada uno de los procesos de la empresa de manera independiente.
-    \item Siguiendo un modelo discreto, que define el nivel de madurez global (al que se refiere el enunciado).
-\end{itemize}
-Aunque siguiendo puntos de enfoque distintos, con ambos modelos se puede alcanzar la optimización de un proceso.
+    \begin{itemize}
+        \item Siguiendo un modelo continuo, que define el nivel de capacidad de cada uno de los procesos de la empresa de manera independiente.
+        \item Siguiendo un modelo discreto, que define el nivel de madurez global (al que se refiere el enunciado).
+    \end{itemize}
+    Aunque siguiendo puntos de enfoque distintos, con ambos modelos se puede alcanzar la optimización de un proceso.
 }
 
 \subsubsection*{30. Los procesos de soporte se realizan siempre de manera iterativa.}% página 7 así no tiene gracia XD
 \textit{Los procesos de soporte sirven de apoyo al resto de procesos y no necesariamente todos ellos serán aplicados de forma iterativa sino puntual.\\
-Esto puede suceder, por ejemplo, con el proceso de validación, que en algunos ciclos de vida puede llegar a aplicarse únicamente en las fases finales del proyecto.
+    Esto puede suceder, por ejemplo, con el proceso de validación, que en algunos ciclos de vida puede llegar a aplicarse únicamente en las fases finales del proyecto.
 }
 
 \subsubsection*{31. La curva de fallos del software con respecto al tiempo aumenta a causa de los programadores y analistas que no saben arreglar software.}
@@ -204,14 +204,14 @@ Esto puede suceder, por ejemplo, con el proceso de validación, que en algunos c
 
 
 \subsubsection*{33. Cuando tenemos claros los requisitos del sistema lo mejor es siempre usar cascada.} % Esto no lo preguntó el NO RABENSO tipo en clase de prácticas? Asumo que el kit de la cuestión es lo de "siempre". Además lo de "tenemos claros los requisitos" es subjetivo
-\textit{El ciclo de vida en cascada es un ciclo de vida cuya aplicación sólo se aconseja en el caso de tener claros los requisitos del sistema, ya que en caso de no tenerlos podría ser necesario repetir el proyecto desde la fase de análisis. Esto no implica de todas formas que sea el mejor ciclo de vida para aplicar a un proyecto, ya que se deben tener en cuenta muchos más factores. Por ejemplo aunque tengamos claros los requisitos del sistema siempre es posible que se trate de un sistema cuyos riesgos deben ser tomados en cuenta, por lo que un ciclo de vida en espiral resultaría más adecuado. También puede darse el caso de que el cliente quiera implicarse en el proceso y valore muy positivamente la entrega frecuente de incrementos.} 
+\textit{El ciclo de vida en cascada es un ciclo de vida cuya aplicación sólo se aconseja en el caso de tener claros los requisitos del sistema, ya que en caso de no tenerlos podría ser necesario repetir el proyecto desde la fase de análisis. Esto no implica de todas formas que sea el mejor ciclo de vida para aplicar a un proyecto, ya que se deben tener en cuenta muchos más factores. Por ejemplo aunque tengamos claros los requisitos del sistema siempre es posible que se trate de un sistema cuyos riesgos deben ser tomados en cuenta, por lo que un ciclo de vida en espiral resultaría más adecuado. También puede darse el caso de que el cliente quiera implicarse en el proceso y valore muy positivamente la entrega frecuente de incrementos.}
 
 \subsubsection*{34. La tabla de activación de procesos establece cuando un proceso se activa dada unas determinadas señales de entrada/salida.} %Página  37. Que la responda Pedro...
 \textit{La tabla de activación de procesos representa tanto sucesos como procesos y salidas de los mismos. Lo que se termina por reflejar en la tabla es qué procesos se verán ejecutados, bajo qué circunstancias y qué salidas tendrán los mismos.}
 
 \subsubsection*{35. En la construcción de prototipos, es poco común que se modifiquen los requisitos.}
 \textit{La construcción de prototipos destaca sobre otros ciclos de vida cuando se trata de proyectos de alto nivel de incertidumbre, donde los requisitos no están nada claros y son especialmente volátiles.\\
-El feedback periódico obtenido del cliente a través de los prototipos, es usado para ir determinando y refinando los requisitos del sistema de forma fiable.}
+    El feedback periódico obtenido del cliente a través de los prototipos, es usado para ir determinando y refinando los requisitos del sistema de forma fiable.}
 
 \subsubsection*{36. Los errores lógicos y las suposiciones incorrectas son directamente proporcionales a la probabilidad de que se ejecute un camino del programa}
 % (Debería ser inversamente proporcional) Lorenzo dice: creo que se refiere a que, si hay un error, va a ser raro que se ejecute el camino del error
@@ -225,15 +225,15 @@ El feedback periódico obtenido del cliente a través de los prototipos, es usad
 
 \subsubsection*{38. Un PSPEC especifica bajo qué condiciones se activan procesos}
 \textit{El propósito de un PSEC (especificación del proceso) es describir textualmente los detalles de un proceso, indicando cómo es el proceso de transformación de una entrada en una salida.
-\\
-Bajo qué condiciones se emiten las señales de control que activan los procesos depende del CSPEC (especificación del control) y pueden ser especificados de manera secuencial o combinacional.
+    \\
+    Bajo qué condiciones se emiten las señales de control que activan los procesos depende del CSPEC (especificación del control) y pueden ser especificados de manera secuencial o combinacional.
 }
 
 \subsubsection*{39. En el modelo lógico de un sistema debemos reflejar la configuración de los backups o la seguridad}
 \textit{El modelo lógico, también denominado esencial, recoge qué debe hacer el sistema para satisfacer los requisitos del usuario y, por lo tanto, en él no figura nada acerca de su implementación\\
-Por otro lado, el modelo de implementación si muestra estos detalles técnicos}
+    Por otro lado, el modelo de implementación si muestra estos detalles técnicos}
 
 \subsubsection*{40. Tras la realización de las pruebas, no hemos detectado defectos por lo que nuestro software ha sido construido correctamente}
 \textit{En las pruebas de software, la detección de un defecto constituye el éxito de la prueba, permitiéndonos la rectificación del software, lo que conlleva una mejora de la calidad.\\
-Por lo tanto, no detectar defectos en el software es probablemente una señal de que no se han realizado pruebas suficientes o no se ha realizado un buen diseño de las mismas.
+    Por lo tanto, no detectar defectos en el software es probablemente una señal de que no se han realizado pruebas suficientes o no se ha realizado un buen diseño de las mismas.
 }

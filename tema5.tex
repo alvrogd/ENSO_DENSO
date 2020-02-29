@@ -39,50 +39,50 @@ Surgieron \uline{nuevos métodos} de análisis para obtener especificaciones:
 El análisis estructurado \textbf{propone la descripción de los sistemas según 3 puntos de vista}:
 \begin{enumerate}
     \item \textbf{Punto de vista de los datos (información)}: Información que utiliza el sistema, haciendo explícitas las relaciones entre datos.
-    \begin{itemize}
-        \item \textbf{D}iagramas \textbf{E}ntidad--\textbf{R}elación (\textbf{DER}).
-        \item \textbf{D}iagramas \textbf{E}structura de \textbf{D}atos (\textbf{DED}).
-    \end{itemize}
+          \begin{itemize}
+              \item \textbf{D}iagramas \textbf{E}ntidad--\textbf{R}elación (\textbf{DER}).
+              \item \textbf{D}iagramas \textbf{E}structura de \textbf{D}atos (\textbf{DED}).
+          \end{itemize}
     \item \textbf{Punto de vista del proceso (función)}: Se centra en qué hace el sistema. Conjunto de operaciones de proceso de información.
-    \begin{itemize}
-        \item \textbf{D}iagramas de \textbf{F}lujo de \textbf{D}atos (\textbf{DFD}).
-        \item Especificaciones de Procesos: termino genérico que engloba la definición de como un sistema transforma unas entradas en salidas mediante pseudocódigo, lenguaje natural, diagramas de flujo\ldots
-    \end{itemize}
+          \begin{itemize}
+              \item \textbf{D}iagramas de \textbf{F}lujo de \textbf{D}atos (\textbf{DFD}).
+              \item Especificaciones de Procesos: termino genérico que engloba la definición de como un sistema transforma unas entradas en salidas mediante pseudocódigo, lenguaje natural, diagramas de flujo\ldots
+          \end{itemize}
     \item \textbf{Punto de vista del comportamiento (tiempo)}: Se centra en cuándo sucede algo en el sistema. Sucesión de estados o modos de funcionamiento. Se indican las condiciones o eventos que hacen que el sistema pase de un modo a otro.
-    \begin{itemize}
-        \item Diagramas de Flujo de Control.
-        \item Especificaciones de Control.
-        \item Diagramas de Estados.
-    \end{itemize}
+          \begin{itemize}
+              \item Diagramas de Flujo de Control.
+              \item Especificaciones de Control.
+              \item Diagramas de Estados.
+          \end{itemize}
 \end{enumerate}
 
 Utilizando estos modelos en conjunto podremos obtener una descripción detallada del \textbf{mismo sistema}.
 
 % Habría que pensar un buen nombre para esta tabla
 \begin{table}[ht]
-\centering
-\resizebox{\textwidth}{!}{
-    \begin{tabular}{c|l|l|l|} \cline{2-4}
-        &   \multicolumn{1}{c|}{\textbf{Información}} &   \multicolumn{1}{c}{\textbf{Función}} &   \multicolumn{1}{|c|}{\textbf{Tiempo}}   \\ \hline
-        
-        \multicolumn{1}{|c|}{\multirow{4}{*}{\textbf{Información}}} &   D. entidad--relación        &   &   \\
-        \multicolumn{1}{|c|}{}    &   D. de estructura de datos   &   &   \\
-        \multicolumn{1}{|c|}{}    &   Matriz entidad/entidad      &   &   \\
-        \multicolumn{1}{|c|}{}    &   Diagramas de clases         &   &   \\ \hline
-        
-        \multicolumn{1}{|c|}{\multirow{7}{*}{\textbf{Función}}}    & D. de flujo de datos  &   D. de flujo de datos   &    \\
-        \multicolumn{1}{|c|}{}    &   Matriz función/entidad  & D. de casos de uso    &   \\
-        \multicolumn{1}{|c|}{}    &   Diagrama de clases  &   D.de estructura de datos    &   \\
-        \multicolumn{1}{|c|}{}    &   D. de colaboración  &   Tarjetas CRC    &   \\
-        \multicolumn{1}{|c|}{}    &   &   D. de componentes   &   \\
-        \multicolumn{1}{|c|}{}    &   &   D. de despliegue    &   \\
-        \multicolumn{1}{|c|}{}    &   &   D. de actividad &   \\ \hline
-        
-        \multicolumn{1}{ |c| }{\multirow{4}{*}{\textbf{Tiempo}}} &   H\textordfeminine\ de vida de la entidad &   Redes de Petri  &   D. de flujo de control \\
-        \multicolumn{1}{|c|}{}    &   D. de estados   &   D. de estados   &   D. de estados   \\
-        \multicolumn{1}{|c|}{}    &   D. de secuencia &   D. de secuencia &   \\
-        \multicolumn{1}{|c|}{}    &   &   D. de actividad &   \\ \hline
-    \end{tabular}
+    \centering
+    \resizebox{\textwidth}{!}{
+        \begin{tabular}{c|l|l|l|} \cline{2-4}
+                                                                        & \multicolumn{1}{c|}{\textbf{Información}} & \multicolumn{1}{c}{\textbf{Función}} & \multicolumn{1}{|c|}{\textbf{Tiempo}} \\ \hline
+
+            \multicolumn{1}{|c|}{\multirow{4}{*}{\textbf{Información}}} & D. entidad--relación                      &                                      &                                       \\
+            \multicolumn{1}{|c|}{}                                      & D. de estructura de datos                 &                                      &                                       \\
+            \multicolumn{1}{|c|}{}                                      & Matriz entidad/entidad                    &                                      &                                       \\
+            \multicolumn{1}{|c|}{}                                      & Diagramas de clases                       &                                      &                                       \\ \hline
+
+            \multicolumn{1}{|c|}{\multirow{7}{*}{\textbf{Función}}}     & D. de flujo de datos                      & D. de flujo de datos                 &                                       \\
+            \multicolumn{1}{|c|}{}                                      & Matriz función/entidad                    & D. de casos de uso                   &                                       \\
+            \multicolumn{1}{|c|}{}                                      & Diagrama de clases                        & D.de estructura de datos             &                                       \\
+            \multicolumn{1}{|c|}{}                                      & D. de colaboración                        & Tarjetas CRC                         &                                       \\
+            \multicolumn{1}{|c|}{}                                      &                                           & D. de componentes                    &                                       \\
+            \multicolumn{1}{|c|}{}                                      &                                           & D. de despliegue                     &                                       \\
+            \multicolumn{1}{|c|}{}                                      &                                           & D. de actividad                      &                                       \\ \hline
+
+            \multicolumn{1}{ |c| }{\multirow{4}{*}{\textbf{Tiempo}}}    & H\textordfeminine\ de vida de la entidad  & Redes de Petri                       & D. de flujo de control                \\
+            \multicolumn{1}{|c|}{}                                      & D. de estados                             & D. de estados                        & D. de estados                         \\
+            \multicolumn{1}{|c|}{}                                      & D. de secuencia                           & D. de secuencia                      &                                       \\
+            \multicolumn{1}{|c|}{}                                      &                                           & D. de actividad                      &                                       \\ \hline
+        \end{tabular}
     }
     \caption{Métodos de modelado según la dimensión del sistema que modelan}
     \label{tab:nonametable}
@@ -90,16 +90,16 @@ Utilizando estos modelos en conjunto podremos obtener una descripción detallada
 
 
 \subsection{Diagramas de flujo de datos (DFD)}
-Representa la programación desde un \textbf{punto de vista funcional}, esto es, las \textbf{entidades básicas son funciones o procesos} que transforman unos datos de entrada en salidas. El sistema se describe como el flujo de información a través de estas funciones. 
+Representa la programación desde un \textbf{punto de vista funcional}, esto es, las \textbf{entidades básicas son funciones o procesos} que transforman unos datos de entrada en salidas. El sistema se describe como el flujo de información a través de estas funciones.
 \begin{enumerate}
-    \item Las funciones del sistema. 
-    \item Las interacciones entre funciones: a dónde va la información de salida de una determinada función. 
+    \item Las funciones del sistema.
+    \item Las interacciones entre funciones: a dónde va la información de salida de una determinada función.
     \item Las transformaciones de datos del sistema: donde se almacena la información después de pasar por las funciones.
     \item Las transformaciones entrada--salida: por donde entra esa información \textbf{al sistema} y a dónde sale. % Qué datos de entrada se transforman en qué datos de salida. Reescrito : Las transformaciones entrada--salida
 \end{enumerate}
 Los DFD \textbf{NO} representan el \textbf{comportamiento}, sólo dicen lo que hace el sistema pero \textbf{NO} indican: %trasparrabas literales, pregunta de examen
 \begin{enumerate}
-    \item \textbf{Cuando se hace}. 
+    \item \textbf{Cuando se hace}.
     \item \textbf{En que secuencia se hace}.
 \end{enumerate}
 
@@ -108,24 +108,24 @@ Los DFD \textbf{NO} representan el \textbf{comportamiento}, sólo dicen lo que h
 
 %Imagen con la notación utilizada (mejor la estandar que sale en la wikipedia
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=0.5\linewidth]{Resources/elementosDFD}
-  \caption{Notación estándar utilizada para representar los elementos del DFD.}
-  \label{fig:elementosDFD}
+    \centering
+    \includegraphics[width=0.5\linewidth]{Resources/elementosDFD}
+    \caption{Notación estándar utilizada para representar los elementos del DFD.}
+    \label{fig:elementosDFD}
 \end{figure}
 \begin{enumerate}
     \item \textbf{Procesos}: Representan elementos software que transforman información.
-    
+
     \item \textbf{Entidades externas}: Representan elementos del sistema informático o de otros sistemas adyacentes que producen o consumen información transformada por el software. Los flujos de datos que comunican el sistema con las entidades externas representan las interfaces del sistema. \textbf{Sólo aparecen en el diagrama de contexto}.
-    
-   \item \textbf{Almacenes de datos}: Representan información almacenada que puede ser utilizada por el software. En la mayoría de los casos, utilizaremos almacenes de datos cuando los procesos intercambien información pero no estén sincronizados.
-   
-   \item \textbf{Flujos de datos}: Representan datos o colecciones de datos que fluyen a través del sistema. Conectan los procesos con otros procesos, con entidades externas o con almacenes de datos. Contienen información de las 3 dimensiones, aunque normalmente sólo representan las dimensiones de Función e Información.\\
-   Según su \textbf{dimensión temporal}:
-      \begin{enumerate}[a.]
-            \item \textbf{Discretos}\textit{(Flecha con una cabeza)}: Representan movimiento de datos en un instante determinado de tiempo.
-            \item \textbf{Continuos}\textit{(Flecha con con dos cabezas)}: Transmisión continua de información. 
-      \end{enumerate}
+
+    \item \textbf{Almacenes de datos}: Representan información almacenada que puede ser utilizada por el software. En la mayoría de los casos, utilizaremos almacenes de datos cuando los procesos intercambien información pero no estén sincronizados.
+
+    \item \textbf{Flujos de datos}: Representan datos o colecciones de datos que fluyen a través del sistema. Conectan los procesos con otros procesos, con entidades externas o con almacenes de datos. Contienen información de las 3 dimensiones, aunque normalmente sólo representan las dimensiones de Función e Información.\\
+          Según su \textbf{dimensión temporal}:
+          \begin{enumerate}[a.]
+              \item \textbf{Discretos}\textit{(Flecha con una cabeza)}: Representan movimiento de datos en un instante determinado de tiempo.
+              \item \textbf{Continuos}\textit{(Flecha con con dos cabezas)}: Transmisión continua de información.
+          \end{enumerate}
 \end{enumerate}
 
 %El rabo pone bastante incapié en los niveles y utiliza una nomenclatura confusa.
@@ -133,35 +133,35 @@ Los DFD \textbf{NO} representan el \textbf{comportamiento}, sólo dicen lo que h
 Los \textbf{DFD} permiten la representación del sistema en múltiples niveles de abstracción, de esta forma se pueden representar gráficos con un número reducido de procesos (máximo 7$\pm$2). Deberíamos usar 7-8 niveles como mucho.
 \begin{enumerate}
     \item \textbf{Nivel 0}: \textbf{Diagrama de Contexto}\\
-    Representa el sistema como un único proceso, el \textbf{proceso 0}. Se representan también las entidades que interactúan con el mismo, dejando claro los \textbf{límites del sistema}.
-    
-    %Imagen nivel 0
-    \begin{figure}[h!]
-  \centering
-  \includegraphics[width=0.45\linewidth]{Resources/niv-0}
-  \caption{DFD de nivel 0 de un sistema.}
-  \label{fig:dfdn0}
-\end{figure}
+          Representa el sistema como un único proceso, el \textbf{proceso 0}. Se representan también las entidades que interactúan con el mismo, dejando claro los \textbf{límites del sistema}.
+
+          %Imagen nivel 0
+          \begin{figure}[h!]
+              \centering
+              \includegraphics[width=0.45\linewidth]{Resources/niv-0}
+              \caption{DFD de nivel 0 de un sistema.}
+              \label{fig:dfdn0}
+          \end{figure}
     \item \textbf{Nivel 1}: \textbf{Diagrama 0}\\
-    Denominado así porque \textit{descompone el proceso 0} en sus funciones principales. Es interesante que éstas sean \textit{independientes} y que procesen \textit{las mismos flujos} que el de nivel 0.
-    %Imagen nivel 1
-    \begin{figure}[h!]
-  \centering
-  \includegraphics[width=0.45\linewidth]{Resources/nivel-1}
-  \caption{DFD de nivel 1 de un sistema.}
-  \label{fig:dfdn1}
-\end{figure}
+          Denominado así porque \textit{descompone el proceso 0} en sus funciones principales. Es interesante que éstas sean \textit{independientes} y que procesen \textit{las mismos flujos} que el de nivel 0.
+          %Imagen nivel 1
+          \begin{figure}[h!]
+              \centering
+              \includegraphics[width=0.45\linewidth]{Resources/nivel-1}
+              \caption{DFD de nivel 1 de un sistema.}
+              \label{fig:dfdn1}
+          \end{figure}
     \item \textbf{Niveles 2\ldots $n-1$}\\
-    Continuamos descomponiendo los procesos en subprocesos, recogiendo las interfaces (flujos) de nivel superior y asignándoselas a subprocesos.
-    %Imagen nivel 2
-    \begin{figure}[h!]
-  \centering
-  \includegraphics[width=0.45\linewidth]{Resources/nivel-2-p5}
-  \caption{DFD de nivel 2 del proceso $5$ del sistema.}
-  \label{fig:dfdn2}
-\end{figure}
+          Continuamos descomponiendo los procesos en subprocesos, recogiendo las interfaces (flujos) de nivel superior y asignándoselas a subprocesos.
+          %Imagen nivel 2
+          \begin{figure}[h!]
+              \centering
+              \includegraphics[width=0.45\linewidth]{Resources/nivel-2-p5}
+              \caption{DFD de nivel 2 del proceso $5$ del sistema.}
+              \label{fig:dfdn2}
+          \end{figure}
     \item \textbf{Nivel $n$}\\
-    Contiene los procesos primitivos, que no podemos descomponer. Si queremos describirlo debemos utilizar técnicas de especificación de procesos.
+          Contiene los procesos primitivos, que no podemos descomponer. Si queremos describirlo debemos utilizar técnicas de especificación de procesos.
 \end{enumerate}
 
 Los procesos en el DFD tienen un \textbf{identificador numérico}:
@@ -176,7 +176,7 @@ Los procesos en el DFD tienen un \textbf{identificador numérico}:
 
 
 \subsection{Especificaciones de proceso (PSPEC)} %Vaya mierda de definición original tenía esto
-El \textbf{P}rocess \textbf{Spec}ification es un documento que describe textualmente los detalles de un proceso, indicando cómo es el proceso de transformación de una información de entrada en otra de salida. 
+El \textbf{P}rocess \textbf{Spec}ification es un documento que describe textualmente los detalles de un proceso, indicando cómo es el proceso de transformación de una información de entrada en otra de salida.
 \\
 Debe ser \textbf{breve} (menor a una página) e incluir siempre \textbf{precondiciones} y \textbf{postcondiciones}.
 \\
@@ -209,15 +209,15 @@ Para solucionar esto el DFC añade las siguientes \uline{entidades}:
     \item \textbf{Condiciones de datos}: Flujos de control generados por un proceso.
     \item \textbf{Ventanas de control}: (representadas por una barra) Indican el procesamiento de señales de control. Su comportamiento se define en las especificaciones de control (CSPEC).
     \item \textbf{Activadores de procesos} Señales de control especiales que activan o desactivan procesos tomando dos posibles valores: \texttt{ON} y \texttt{OFF}. Siguen la jerarquía de los modelos, es decir: un proceso está activo si y sólo si todos sus antecesores están activos.
-    \\
-    \textit{Por defecto: si no tiene activador, un proceso se considera activo si sus antecesores lo están}.
+          \\
+          \textit{Por defecto: si no tiene activador, un proceso se considera activo si sus antecesores lo están}.
 \end{itemize}
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=0.9\linewidth]{Resources/ejemploDFC}
-  \caption{Ejemplo de un sistema de traducción. Préstese atención a las condiciones de dato: \textit{buffer lleno/buffer vacío}, las ventanas de control (barras) y el activador.}
-  \label{fig:ejemploCSPEC}
+    \centering
+    \includegraphics[width=0.9\linewidth]{Resources/ejemploDFC}
+    \caption{Ejemplo de un sistema de traducción. Préstese atención a las condiciones de dato: \textit{buffer lleno/buffer vacío}, las ventanas de control (barras) y el activador.}
+    \label{fig:ejemploCSPEC}
 \end{figure}
 
 
@@ -233,7 +233,7 @@ Para solucionar esto el DFC añade las siguientes \uline{entidades}:
 \subsection{Especificaciones de control (CSPEC)}
 
 El \textbf{C}ontrol \textbf{SPEC}ification es un documento que \textbf{especifica de manera secuencial o combinacional el comportamiento del programa}. Indicando bajo qué condiciones se emiten las señales de control que activan los procesos.
-\\ 
+\\
 \\
 Existirá por lo tanto una \textbf{relación 1:1 entre los CSPEC y los DFC} de la jerarquía ya que el primero determina la activación del segundo, utilizando las \textbf{ventanas de control de los DFC como interfaces}.
 \\
@@ -242,9 +242,9 @@ Existirá por lo tanto una \textbf{relación 1:1 entre los CSPEC y los DFC} de l
 Para su elaboración, se utilizan diferentes \uline{técnicas de especificación}:
 \begin{enumerate}
     \item Lenguaje estructurado (Pseudocódigo). % parseo lo de la traspa
-\begin{figure}[h!]
-\centering
-  \begin{verbatim}
+          \begin{figure}[h!]
+              \centering
+              \begin{verbatim}
                         SI BufferVacio
                             MIENTRAS NO BufferLleno
                                 ESPERA Retardo
@@ -252,60 +252,60 @@ Para su elaboración, se utilizan diferentes \uline{técnicas de especificación
                             FIN MIENTRAS NO
                         FIN SI
   \end{verbatim}
-  \caption{Ejemplo pseudocódigo para la activación de la función \emph{OnTimer}.}
-\end{figure}
+              \caption{Ejemplo pseudocódigo para la activación de la función \emph{OnTimer}.}
+          \end{figure}
     \item En sistemas combinacionales:
-    \begin{itemize}
-        \item Tablas de activación de procesos %parseo la de la traspa
-        \begin{table}[h!]
-        \centering
-            \begin{tabular}{|c|c|} \cline{1-2}
-             & MiraSiHayDatos \\ \hline
-            3.1 & 1 \\ \hline
-            3.2 & 0 \\ \hline
-            3.3 & 0  \\ \hline
-            \end{tabular}
-            \caption{Ejemplo de tabla de activación de un proceso.}
-        \end{table}
+          \begin{itemize}
+              \item Tablas de activación de procesos %parseo la de la traspa
+                    \begin{table}[h!]
+                        \centering
+                        \begin{tabular}{|c|c|} \cline{1-2}
+                                & MiraSiHayDatos \\ \hline
+                            3.1 & 1              \\ \hline
+                            3.2 & 0              \\ \hline
+                            3.3 & 0              \\ \hline
+                        \end{tabular}
+                        \caption{Ejemplo de tabla de activación de un proceso.}
+                    \end{table}
 
-        
-        %Traspa 55
-        \item Tablas de decisión
-            \begin{table}[h!]
-                \centering
-                \resizebox{0.4\textwidth}{!}{%
-                    \begin{tabular}{|l|c|c|c|c|c|}
-                    \hline
-                    \multicolumn{6}{|c|}{\textbf{CONDICIONES}} \\ \hline
-                    Condición 1 & Sí & Sí & No & No & No \\
-                    Condición 2 & Sí & - & - & - & - \\
-                    Condición 3 & - & Sí & - & - & - \\
-                    Condición 4 & - & - & Sí & - & - \\
-                     &  &  &  &  &  \\ \hline
-                    \multicolumn{6}{|c|}{\textbf{ACCIONES}} \\ \hline
-                    Acción 1 & X &  & X &  &  \\
-                    Acción 2 &  & X &  & X & X \\\hline
-                    \end{tabular}
-                    }
-                \caption{Ejemplo de tabla de decisiones de un proceso.}
-            \end{table}
-    \end{itemize}
+
+                    %Traspa 55
+              \item Tablas de decisión
+                    \begin{table}[h!]
+                        \centering
+                        \resizebox{0.4\textwidth}{!}{%
+                            \begin{tabular}{|l|c|c|c|c|c|}
+                                \hline
+                                \multicolumn{6}{|c|}{\textbf{CONDICIONES}} \\ \hline
+                                Condición 1 & Sí & Sí & No & No & No       \\
+                                Condición 2 & Sí & -  & -  & -  & -        \\
+                                Condición 3 & -  & Sí & -  & -  & -        \\
+                                Condición 4 & -  & -  & Sí & -  & -        \\
+                                            &    &    &    &    &          \\ \hline
+                                \multicolumn{6}{|c|}{\textbf{ACCIONES}}    \\ \hline
+                                Acción 1    & X  &    & X  &    &          \\
+                                Acción 2    &    & X  &    & X  & X        \\\hline
+                            \end{tabular}
+                        }
+                        \caption{Ejemplo de tabla de decisiones de un proceso.}
+                    \end{table}
+          \end{itemize}
     \item En sistemas secuenciales:
-    \begin{itemize}
-        \item Diagramas de estados
-        \begin{figure}[h!]
-          \centering
-          \includegraphics[width=0.9\linewidth]{Resources/estados}
-          \caption{Ejemplo de un diagrama de estados.}
-        \end{figure}
+          \begin{itemize}
+              \item Diagramas de estados
+                    \begin{figure}[h!]
+                        \centering
+                        \includegraphics[width=0.9\linewidth]{Resources/estados}
+                        \caption{Ejemplo de un diagrama de estados.}
+                    \end{figure}
 
-        \item Redes de Petri
-                \begin{figure}[H]
-          \centering
-          \includegraphics[width=0.9\linewidth]{Resources/redPetri}
-          \caption{Proceso de generación de una reclamación modelado en redes de Petri.}
-        \end{figure}
-    \end{itemize}
+              \item Redes de Petri
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[width=0.9\linewidth]{Resources/redPetri}
+                        \caption{Proceso de generación de una reclamación modelado en redes de Petri.}
+                    \end{figure}
+          \end{itemize}
 \end{enumerate}
 
 
@@ -346,54 +346,54 @@ Debemos revisar si nuestra especificación cumple las siguientes propiedades.
 Las técnicas matriciales se utilizan \textbf{principalmente para ayudar a verificar la consistencia entre los componentes de distintos modelos} de un sistema.
 \begin{enumerate}
     \item \textbf{Matriz entidad/función}: Visualiza las relaciones existentes entre las funciones que lleva a cabo un sistema y la información necesaria para soportarlas.\\
-    Los elementos de las filas son entidades o relaciones presentes en el diagrama entidad--relación, mientras que los de las columnas pueden ser funciones de alto nivel representadas en un diagrama de flujo de datos.\\
-    En cada celda se incluyen las \textbf{acciones} que puede realizar la función (\textbf{I}nsertar, \textbf{L}eer, \textbf{M}odificar y \textbf{B}orrar).
-    %tabla pág 88 traparabas
+          Los elementos de las filas son entidades o relaciones presentes en el diagrama entidad--relación, mientras que los de las columnas pueden ser funciones de alto nivel representadas en un diagrama de flujo de datos.\\
+          En cada celda se incluyen las \textbf{acciones} que puede realizar la función (\textbf{I}nsertar, \textbf{L}eer, \textbf{M}odificar y \textbf{B}orrar).
+          %tabla pág 88 traparabas
 
- 
-\begin{table}[h!]
-\centering
-\begin{tabular}{cl|c|c|c|} \cline{3-5}
-            & & \multicolumn{3}{c|}{\textbf{Funciones}}             \\ \cline{3-5}
-             & & Gestionar Presupuesto & Gestionar Cliente & \ldots \\ \cline{2-5}
-\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{{\small \textbf{Entidades}}}}} & \multicolumn{1}{|c|}{Cliente}     & L           & I, M, B  &  \\ \cline{2-5}
-            & \multicolumn{1}{|c|}{Presupuesto} & I, M, B  & & \\ \cline{2-5}
-            & \multicolumn{1}{|c|}{\ldots} &               & & \\ \cline{2-5}    
-\end{tabular}
-\caption{Ejemplo de matriz entidad/función.}
-\label{tab:matrizEF}
-\end{table}
-    
+
+          \begin{table}[h!]
+              \centering
+              \begin{tabular}{cl|c|c|c|} \cline{3-5}
+                                                                                                          &                                   & \multicolumn{3}{c|}{\textbf{Funciones}}                              \\ \cline{3-5}
+                                                                                                          &                                   & Gestionar Presupuesto                   & Gestionar Cliente & \ldots \\ \cline{2-5}
+                  \parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{{\small \textbf{Entidades}}}}} & \multicolumn{1}{|c|}{Cliente}     & L                                       & I, M, B           &        \\ \cline{2-5}
+                                                                                                          & \multicolumn{1}{|c|}{Presupuesto} & I, M, B                                 &                   &        \\ \cline{2-5}
+                                                                                                          & \multicolumn{1}{|c|}{\ldots}      &                                         &                   &        \\ \cline{2-5}
+              \end{tabular}
+              \caption{Ejemplo de matriz entidad/función.}
+              \label{tab:matrizEF}
+          \end{table}
+
     \item \textbf{Matriz entidad/entidad}: Muestra las relaciones normales del diagrama entidad--relación.
-    %tabla 89 traparaba
-\begin{table}[h!]
-\centering
-\begin{tabular}{cl|c|c|c|} \cline{3-5}
-            & & \multicolumn{3}{c|}{\textbf{Entidades}}             \\ \cline{3-5}
-             & & Cliente & Presupuesto & \ldots \\ \cline{2-5}
-\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{{\small \textbf{Entidades}}}}} & \multicolumn{1}{|c|}{Cliente}     &                      & Tiene         &  \\ \cline{2-5}
-            & \multicolumn{1}{|c|}{Presupuesto} & & & \\ \cline{2-5}
-            & \multicolumn{1}{|c|}{\ldots} & & & \\ \cline{2-5}    
-\end{tabular}
-\caption{Ejemplo de matriz entidad/entidad.}
-\label{tab:matrizEE}
-\end{table}
-    
-    %mecago en dios tanto royo para definir señales de control y ahora usa eventos....
+          %tabla 89 traparaba
+          \begin{table}[h!]
+              \centering
+              \begin{tabular}{cl|c|c|c|} \cline{3-5}
+                                                                                                          &                                   & \multicolumn{3}{c|}{\textbf{Entidades}}                        \\ \cline{3-5}
+                                                                                                          &                                   & Cliente                                 & Presupuesto & \ldots \\ \cline{2-5}
+                  \parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{{\small \textbf{Entidades}}}}} & \multicolumn{1}{|c|}{Cliente}     &                                         & Tiene       &        \\ \cline{2-5}
+                                                                                                          & \multicolumn{1}{|c|}{Presupuesto} &                                         &             &        \\ \cline{2-5}
+                                                                                                          & \multicolumn{1}{|c|}{\ldots}      &                                         &             &        \\ \cline{2-5}
+              \end{tabular}
+              \caption{Ejemplo de matriz entidad/entidad.}
+              \label{tab:matrizEE}
+          \end{table}
+
+          %mecago en dios tanto royo para definir señales de control y ahora usa eventos....
     \item \textbf{Matriz evento/entidad}: Muestra las acciones que provocan los eventos sobre las entidades: (\textbf{I}nsertar, \textbf{L}eer, \textbf{M}odificar y \textbf{B}orrar).
-    %trapa raba 90
-\begin{table}[h!]
-\centering
-\begin{tabular}{cl|c|c|c|} \cline{3-5}
-            & & \multicolumn{3}{c|}{\textbf{Entidades}}             \\ \cline{3-5}
-             & & Cliente & Presupuesto & \ldots \\ \cline{2-5}
-\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{{\small \textbf{Eventos}}}}} & \multicolumn{1}{|c|}{Datos del cliente}     & I, M, B           &   &  \\ \cline{2-5}
-            & \multicolumn{1}{|c|}{Datos del presupuesto} & I  & I, M, B & \\ \cline{2-5}
-            & \multicolumn{1}{|c|}{\ldots} &               & & \\ \cline{2-5}    
-\end{tabular}
-\caption{Ejemplo de matriz evento/entidad.}
-\label{tab:matrizEvE}
-\end{table}
+          %trapa raba 90
+          \begin{table}[h!]
+              \centering
+              \begin{tabular}{cl|c|c|c|} \cline{3-5}
+                                                                                                        &                                             & \multicolumn{3}{c|}{\textbf{Entidades}}                        \\ \cline{3-5}
+                                                                                                        &                                             & Cliente                                 & Presupuesto & \ldots \\ \cline{2-5}
+                  \parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{{\small \textbf{Eventos}}}}} & \multicolumn{1}{|c|}{Datos del cliente}     & I, M, B                                 &             &        \\ \cline{2-5}
+                                                                                                        & \multicolumn{1}{|c|}{Datos del presupuesto} & I                                       & I, M, B     &        \\ \cline{2-5}
+                                                                                                        & \multicolumn{1}{|c|}{\ldots}                &                                         &             &        \\ \cline{2-5}
+              \end{tabular}
+              \caption{Ejemplo de matriz evento/entidad.}
+              \label{tab:matrizEvE}
+          \end{table}
 \end{enumerate}
 
 \section{Metodología del análisis estructurado}
@@ -412,12 +412,12 @@ Fuera de estas fases tenemos dos modelos más: %no lo tengo muy claro, parece as
 \begin{enumerate}
     \item \textbf{Modelo esencial o lógico}: es un modelo de lo que el sistema debe hacer para satisfacer los requisitos del usuario. En él no figura nada acerca de cómo se va a implementar el sistema, como los ficheros de backup, o la secuenciación de proceso.
     \item \textbf{Modelo de implementación}: En él se pueden mostrar detalles técnicos:
-    \begin{itemize}
-        \item Elección de dispositivos y formatos E/S.
-        \item Volúmenes de datos, backups, dispositivos de almacenamiento.
-        \item Tiempos de respuesta.
-        \item Seguridad.
-    \end{itemize}
+          \begin{itemize}
+              \item Elección de dispositivos y formatos E/S.
+              \item Volúmenes de datos, backups, dispositivos de almacenamiento.
+              \item Tiempos de respuesta.
+              \item Seguridad.
+          \end{itemize}
 \end{enumerate}
 %Tema acabado
 

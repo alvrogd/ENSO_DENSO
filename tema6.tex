@@ -13,11 +13,11 @@
 
 % Esto está puesto así en las traspas? Coincide con lo que saca el intellij?
 % De dónde estás sacando que genera un fallo? T
- % de las trasparrabas. pues entonces bien.
- %
- 
+% de las trasparrabas. pues entonces bien.
+%
+
 \paragraph{Fallo} Incapacidad de un sistema o de alguno de sus componentes para realizar las funciones requeridas dentro de los requisitos de rendimiento especificados.
- 
+
 \paragraph{Defecto} Incorrección en el software que \textbf{genera un fallo}\\
 \textit{Ejemplo: un proceso, una definición de datos o un paso de procesamiento incorrectos en un programa.}
 % Palabra de RABO
@@ -31,10 +31,10 @@
 \end{itemize}
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=0.8\linewidth]{Resources/cuernos}
-  \caption{Recuerda: error, defecto y fallo no son lo mismo.}
-  \label{fig:cuernos}
+    \centering
+    \includegraphics[width=0.8\linewidth]{Resources/cuernos}
+    \caption{Recuerda: error, defecto y fallo no son lo mismo.}
+    \label{fig:cuernos}
 \end{figure}
 
 
@@ -55,10 +55,10 @@ La prueba exhaustiva del software es impracticable: \textbf{no} se pueden probar
     \item \textbf{Se debe inspeccionar a conciencia el resultado de cada prueba} para así poder descubrir posibles síntomas de defectos.
     \item \textbf{Al generar casos de prueba se deben incluir tanto datos de entrada válidos y esperados como no válidos e inesperados}.
     \item \textbf{Las pruebas deben centrarse en probar si el software}:
-    \begin{itemize}
-        \item \textbf{No hace lo que debe hacer}.
-        \item \textbf{Hace lo que no debe hacer}.
-    \end{itemize}
+          \begin{itemize}
+              \item \textbf{No hace lo que debe hacer}.
+              \item \textbf{Hace lo que no debe hacer}.
+          \end{itemize}
     \item \textbf{Se deben evitar los casos desechables}: No documentados o diseñados sin cuidado.
     \item \textbf{No deben hacerse casos de prueba suponiendo que no hay defectos en los programas}.
     \item \textbf{Las pruebas son una tarea tanto o más creativa que el desarrollo de software}.
@@ -86,29 +86,29 @@ La prueba exhaustiva del software es impracticable: \textbf{no} se pueden probar
 
 De acuerdo con el \textbf{estándar IEEE 829} Se generarán la siguiente documentación:
 \begin{enumerate}
-    \item \textbf{Plan de pruebas}: Establece las líneas generales del plan, especificando qué elementos y funcionalidades se van a probar, personal responsable, metodologías seguidas\ldots 
-    % Level Test Plan (LTP): For each LTP the scope, approach, resources, and schedule of the testing activities for its specified level of testing need to be described. The items being tested, the features to be tested, the testing tasks to be performed, the personnel responsible for each task, and the associated risk(s) need to be identified.
+    \item \textbf{Plan de pruebas}: Establece las líneas generales del plan, especificando qué elementos y funcionalidades se van a probar, personal responsable, metodologías seguidas\ldots
+          % Level Test Plan (LTP): For each LTP the scope, approach, resources, and schedule of the testing activities for its specified level of testing need to be described. The items being tested, the features to be tested, the testing tasks to be performed, the personnel responsible for each task, and the associated risk(s) need to be identified.
     \item \textbf{Especificación del diseño de pruebas}: Detalla los casos de prueba y los resultados esperados así como los criterios de paso de prueba. % Level Test Design (LTD): Detailing test cases and the expected results as well as test pass criteria.
 
     \item \textbf{Especificación de los casos de prueba}: Definen los datos de prueba (entradas y salidas) usados en la ejecución de los casos de prueba. % Level Test Case (LTC): Specifying the test data for use in running the test cases identified in the Level Test Design.
-    
-    
+
+
     \item \textbf{Especificación de procedimiento de las pruebas}: Detalla cómo se ejecutará cada uno de los casos de prueba y los pasos necesarios a seguir.
-    
+
     \item Documentos de ejecución (\textbf{para Taboada el IEEE 1008})\footnote{Rabenso divide la documentación de pruebas en dos estándares: el IEEE 829 y el 1008. De acuerdo, con el IEEE 829--2008, esto no sería necesario pues éste estándar es más completo e incluye todas las fases.}:
-    \begin{itemize}
-        \item \textbf{Histórico de pruebas}: provee cronológicamente detalles relevante sobre la ejecución de las pruebas informando de cuáles fueron ejecutadas, quién las ejecutó, en qué orden y si pasaron o fallaron la prueba.
-        % To provide a chronological record of relevant details about the execution of tests, e.g. recording which tests cases were run, who ran them, in what order, and whether each test passed or failed.
-        \item \textbf{Informe de incidentes}: informa de cualquier problema, incidente o defecto que ocurra durante la ejecución de las pruebas que requiera investigación.
-    \end{itemize}
+          \begin{itemize}
+              \item \textbf{Histórico de pruebas}: provee cronológicamente detalles relevante sobre la ejecución de las pruebas informando de cuáles fueron ejecutadas, quién las ejecutó, en qué orden y si pasaron o fallaron la prueba.
+                    % To provide a chronological record of relevant details about the execution of tests, e.g. recording which tests cases were run, who ran them, in what order, and whether each test passed or failed.
+              \item \textbf{Informe de incidentes}: informa de cualquier problema, incidente o defecto que ocurra durante la ejecución de las pruebas que requiera investigación.
+          \end{itemize}
     \item \textbf{Informe resumen de pruebas}: sumario de los resultados y evaluaciones y recomendaciones basadas en éstos. Realizado tras la finalización de la ejecución de las pruebas.
-        % Level Test Report (LTR): To summarize the results of the designated testing activities and to provide evaluations and recommendations based on the results after test execution has finished for the specific test level
+          % Level Test Report (LTR): To summarize the results of the designated testing activities and to provide evaluations and recommendations based on the results after test execution has finished for the specific test level
 \end{enumerate}
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=0.6\linewidth]{Resources/IEEE829}
-  \caption{El estándar IEEE 829--2008 para la realización de pruebas del software diferencia tres fases: especificación del plan de pruebas, ejecución, y elaboración de informes.}
-  \label{fig:IEEE829}
+    \centering
+    \includegraphics[width=0.6\linewidth]{Resources/IEEE829}
+    \caption{El estándar IEEE 829--2008 para la realización de pruebas del software diferencia tres fases: especificación del plan de pruebas, ejecución, y elaboración de informes.}
+    \label{fig:IEEE829}
 \end{figure}
 
 \section{Técnicas de diseño de casos de prueba}
@@ -117,7 +117,7 @@ Dos enfoques principales:
     \item \textbf{Caja negra: sólo necesitamos conocer la interfaz del elemento probado, probamos si las salidas se corresponden con la entrada. Enfoque funcional}
     \item \textbf{Caja blanca: conocemos las interioridades del sistema, probaremos que los componentes internos funcionan bien y encajan correctamente. Enfoque estructural}
 \end{enumerate}
-\subsection{Pruebas de caja negra (funcionales)} 
+\subsection{Pruebas de caja negra (funcionales)}
 
 Dado que no es posible probar todo, esta sección recoge varias estrategias de creación de pruebas de caja negra que aumentan las posibilidades de descubrir errores:
 
@@ -144,37 +144,37 @@ Dado que no es posible probar todo, esta sección recoge varias estrategias de c
 
 
 
-\subsection{Pruebas de caja blanca (estructurales)} 
+\subsection{Pruebas de caja blanca (estructurales)}
 El diseño de casos tiene que basarse en la \textbf{elección de caminos importantes que ofrezcan una seguridad aceptable de descubrir un defecto}, y para ello se utilizan los criterios de cobertura lógica. No requieren el uso de representaciones gráficas, pero se suelen utilizar grafos de flujo.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=0.6\linewidth]{Resources/ejemplosBasicosGrafos}
-  \caption{Grafos básicos.}
-  \label{fig:ejemplobasicografos}
+    \centering
+    \includegraphics[width=0.6\linewidth]{Resources/ejemplosBasicosGrafos}
+    \caption{Grafos básicos.}
+    \label{fig:ejemplobasicografos}
 \end{figure}
 
 \subsubsection{Criterios de cobertura lógica}
 
 \begin{enumerate}
     \item \textbf{Cobertura de sentencias}: Cada sentencia o instrucción del programa se ejecuta al menos una vez.
-    
+
     \item \textbf{Cobertura de decisiones}: Cada decisión tiene, al menos una vez, un resultado verdadero y uno falso. En general, la cobertura de decisiones asegura la cobertura de sentencia.
-    
+
     \item \textbf{Cobertura de condiciones}: Cada condición de cada decisión adopta, al menos una vez, un resultado verdadero y otro falso. No garantiza la cobertura de decisiones.
-    
+
     \item \textbf{Criterio de decisión/condición}: Exigir el criterio de cobertura de condiciones obligando a que se cumpla también el criterio de decisiones.
-    
-    \item \textbf{Criterio de condición múltiple}: Descompone cada decisión múltiple en una secuencia de decisiones unicondicionales\footnote{una decisión es un conjunto de condiciones, por ejemplo en 
-    \texttt{a != null \&\& a.leng > 3} es una decisión que se descompone en las condiciones \texttt{a != null} y \texttt{a.leng > 3}} y luego se exige que cada combinación posible de resultados de cada condición se ejecute al menos una vez. %WTF condiciones unicondicionales, eso hay que revisarlo…
-    
+
+    \item \textbf{Criterio de condición múltiple}: Descompone cada decisión múltiple en una secuencia de decisiones unicondicionales\footnote{una decisión es un conjunto de condiciones, por ejemplo en
+              \texttt{a != null \&\& a.leng > 3} es una decisión que se descompone en las condiciones \texttt{a != null} y \texttt{a.leng > 3}} y luego se exige que cada combinación posible de resultados de cada condición se ejecute al menos una vez. %WTF condiciones unicondicionales, eso hay que revisarlo…
+
     \item \textbf{Cobertura de caminos}: Cada uno de los posibles caminos del grafo de caminos  se ejecuta al menos una vez. Según las veces que recorramos el bucle tenemos diferentes tipos:
-    \begin{itemize}
-        \item Sin entrar en su interior.
-        \item Ejecutándolo una vez.
-        \item Ejecutándolo dos veces.
-        \item Ejecutándolo n veces.
-    \end{itemize}
+          \begin{itemize}
+              \item Sin entrar en su interior.
+              \item Ejecutándolo una vez.
+              \item Ejecutándolo dos veces.
+              \item Ejecutándolo n veces.
+          \end{itemize}
 \end{enumerate}
 
 
@@ -183,20 +183,20 @@ El diseño de casos tiene que basarse en la \textbf{elección de caminos importa
 La prueba de bucles es la \textbf{técnica de prueba de caja blanca que se centra exclusivamente en la validez de las construcciones de bucles}. Se pueden definir 4 clases de bucles:
 \begin{enumerate}
     \item \textbf{Bucles simples}: Se les debe aplicar el siguiente conjunto de pruebas:
-    \begin{itemize}
-        \item Pasarlo por alto.
-        \item Pasar una vez por el bucle.
-        \item Pasar 2 veces por el bucle.
-        \item Hacer $m$ pasos con $m < n$ tal que $n$ es el mayor número de pasos permitidos por el bucle.
-        \item Hacer $n-1$ y $n+1$ pasos
-    \end{itemize}
+          \begin{itemize}
+              \item Pasarlo por alto.
+              \item Pasar una vez por el bucle.
+              \item Pasar 2 veces por el bucle.
+              \item Hacer $m$ pasos con $m < n$ tal que $n$ es el mayor número de pasos permitidos por el bucle.
+              \item Hacer $n-1$ y $n+1$ pasos
+          \end{itemize}
     \item \textbf{Bucles anidados}:
-    \begin{itemize}
-        \item Comenzar por el bucle más interior con los otros en sus valores mínimos.
-        \item Llevar a cabo la prueba de bucle simple al más interior.
-        \item Progresar hacia fuera, manteniendo el resto de bucles externos en sus valores mínimos y los demás bucles anidados en sus valores típicos.
-        \item Continuar hasta probar todos los bucles.
-    \end{itemize}
+          \begin{itemize}
+              \item Comenzar por el bucle más interior con los otros en sus valores mínimos.
+              \item Llevar a cabo la prueba de bucle simple al más interior.
+              \item Progresar hacia fuera, manteniendo el resto de bucles externos en sus valores mínimos y los demás bucles anidados en sus valores típicos.
+              \item Continuar hasta probar todos los bucles.
+          \end{itemize}
     \item \textbf{Bucles concatenados}: Se pueden probar mediante el enfoque para bucles simples siempre que cada bucle sea independiente del resto. Si son dependientes se usa la técnica para bucles anidados.
     \item \textbf{Bucles no estructurados}: Se deben rediseñar para que se ajusten a las construcciones de la programación estructurada.
 \end{enumerate}
@@ -265,15 +265,15 @@ No debe usarse para evaluar al personal.
 \begin{enumerate} % 
     \item \textbf{Prueba de unidad}: Se centra en ejercitar la lógica del módulo y los distintos aspectos de la especificación de las funciones que debe realizar el módulo.
     \item \textbf{Prueba de integración}: Debe tener en cuenta los mecanismos de agrupación de módulos fijados en la estructura del programa, así como las interfaces entre componentes.
-    %\item \textbf{Prueba de validación}: Debe comprobar si existen desajustes entre el software y los requisitos fijados para su funcionamiento en la especificación de requisitos software (ERS). %Esta prueba no está en las trasparrabas. Por lo tanto, no existe
+          %\item \textbf{Prueba de validación}: Debe comprobar si existen desajustes entre el software y los requisitos fijados para su funcionamiento en la especificación de requisitos software (ERS). %Esta prueba no está en las trasparrabas. Por lo tanto, no existe
     \item \textbf{Prueba del sistema}: Debe comprobar el cumplimiento de los objetivos indicados para el sistema.
     \item \textbf{Prueba de aceptación}: El usuario verifica en su entorno si acepta el producto.
 \end{enumerate}
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=0.7\linewidth]{Resources/enfoquePruebas}
-  \caption{Las diferentes estrategias de prueba y su relación con las otras fases del construcción del software}
-  \label{fig:estrategiasPruebas}
+    \centering
+    \includegraphics[width=0.7\linewidth]{Resources/enfoquePruebas}
+    \caption{Las diferentes estrategias de prueba y su relación con las otras fases del construcción del software}
+    \label{fig:estrategiasPruebas}
 \end{figure}
 
 
@@ -282,10 +282,10 @@ No debe usarse para evaluar al personal.
 \subsection{Desde el punto de vista de diseño de casos de pruebas}
 \begin{itemize}
     \item \textbf{Las técnicas de caja negra}: Totalmente válidas.
-    \begin{itemize}
-        \item Análisis de valores límite, tratamiento de combinaciones de entrada y conjetura de errores.
-        \item Debemos diseñar las pruebas basándonos en datos y eventos de los escenarios de los casos de uso y en flujos alternativos, tratamientos de error y excepciones.
-    \end{itemize}
+          \begin{itemize}
+              \item Análisis de valores límite, tratamiento de combinaciones de entrada y conjetura de errores.
+              \item Debemos diseñar las pruebas basándonos en datos y eventos de los escenarios de los casos de uso y en flujos alternativos, tratamientos de error y excepciones.
+          \end{itemize}
     \item \textbf{Las técnicas de caja blanca}: Disminuyen sus posibilidades de aplicación. Quedan confinadas a las instrucciones de cada método de cada clase.
 \end{itemize}
 
@@ -295,14 +295,14 @@ Los cambios más radicales aparecen en las pruebas de integración, cuando nos f
 \subsection{Cuestiones a tener en cuenta}
 Ciertas cuestiones a tener en cuenta a la hora de probar software orientado a objetos son:
 \begin{itemize}
-\item \textbf{Herencia}: probar un método de la clase padre no garantiza su funcionamiento en clases hijas.
-\item \textbf{Polimorfismo}: un único método puede tener implementaciones diferentes en función de la clase en la que se use.
+    \item \textbf{Herencia}: probar un método de la clase padre no garantiza su funcionamiento en clases hijas.
+    \item \textbf{Polimorfismo}: un único método puede tener implementaciones diferentes en función de la clase en la que se use.
     \item Es conveniente recordar que la propia programación o diseño orientado a objetos hace menos probables ciertos tipos de error, más probables otros, y provoca la aparición de nuevos tipos de defectos. %Pues OC, mejor redactado.
 \end{itemize}
 
 \newpage
 \section{Ejemplo práctico de cálculo de la complejidad ciclomática de un método}
-Dado el método  \texttt{public String porcentajeVentasMes();} tal que: 
+Dado el método  \texttt{public String porcentajeVentasMes();} tal que:
 \begin{verbatim}
 public String porcentajeVentasMes() {
 	    [...]
@@ -329,38 +329,38 @@ public String porcentajeVentasMes() {
 \end{verbatim}
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=0.4\linewidth]{Resources/porcentajeVentasMes}
-  \caption{Grafo de flujo del método.}
-  \label{fig:joder}
+    \centering
+    \includegraphics[width=0.4\linewidth]{Resources/porcentajeVentasMes}
+    \caption{Grafo de flujo del método.}
+    \label{fig:joder}
 \end{figure}
 \newpage
 \paragraph{Caminos básicos obtenidos}
-    \begin{enumerate}
-        \item 1-3-6
-        \item 1-\underline{2}-1-3-6
-        \item 1-3-\underline{4}-3-6
-        \item 1-2-3-4-\underline{5}-3-6
-    \end{enumerate}
+\begin{enumerate}
+    \item 1-3-6
+    \item 1-\underline{2}-1-3-6
+    \item 1-3-\underline{4}-3-6
+    \item 1-2-3-4-\underline{5}-3-6
+\end{enumerate}
 
 \paragraph{Caminos independientes:} 3
-    \begin{enumerate}
-        \item 1-(3-4)\textsuperscript{x31}-3-6
-            \begin{itemize}
-                \item No puede existir en el sistema ninguna venta realizada en el mes actual.
-                \item La variable \texttt{columnas} sólo podrá poseer los valores 28, 29, 30 ó 31, dependiendo del mes en el que es ejecutada la función. Es por esto que no se puede llevar a cabo ningún camino que contenga 1-3-6.
-            \end{itemize}
-        \item 1-2-(3-4)\textsuperscript{x31}-3-6
-            \begin{itemize}
-                \item Para seguir este camino independiente, deberá existir  una venta realizada en el mes actual, o más si se desea repetir más veces el segmento 1-2.
-                \item Ningún artículo podrá tener un precio superior a 0 para poder seguir este camino estrictamente.
-            \end{itemize}
-        \item 1-(3-4)\textsuperscript{x31}-3-6
-            \begin{itemize}
-                \item Equivalente al camino 1.
-            \end{itemize}
-        \item 1-2-(3-(4\textbar{}\textbar{}(4-5)))\textsuperscript{x31}-3-6
-            \begin{itemize}
-                \item Para seguir este camino independiente, deberá existir  una venta realizada en el mes actual con un precio por unidad superior a 0 o más si se desea repetir más veces el segmento 3-4-5.
-            \end{itemize}
-    \end{enumerate}
+\begin{enumerate}
+    \item 1-(3-4)\textsuperscript{x31}-3-6
+          \begin{itemize}
+              \item No puede existir en el sistema ninguna venta realizada en el mes actual.
+              \item La variable \texttt{columnas} sólo podrá poseer los valores 28, 29, 30 ó 31, dependiendo del mes en el que es ejecutada la función. Es por esto que no se puede llevar a cabo ningún camino que contenga 1-3-6.
+          \end{itemize}
+    \item 1-2-(3-4)\textsuperscript{x31}-3-6
+          \begin{itemize}
+              \item Para seguir este camino independiente, deberá existir  una venta realizada en el mes actual, o más si se desea repetir más veces el segmento 1-2.
+              \item Ningún artículo podrá tener un precio superior a 0 para poder seguir este camino estrictamente.
+          \end{itemize}
+    \item 1-(3-4)\textsuperscript{x31}-3-6
+          \begin{itemize}
+              \item Equivalente al camino 1.
+          \end{itemize}
+    \item 1-2-(3-(4\textbar{}\textbar{}(4-5)))\textsuperscript{x31}-3-6
+          \begin{itemize}
+              \item Para seguir este camino independiente, deberá existir  una venta realizada en el mes actual con un precio por unidad superior a 0 o más si se desea repetir más veces el segmento 3-4-5.
+          \end{itemize}
+\end{enumerate}
