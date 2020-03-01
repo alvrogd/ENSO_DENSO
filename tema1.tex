@@ -1,31 +1,48 @@
 \part{El Software}
+
 \paragraph{Software}
 % Instrucciones de ordenador que cuando se ejecutan proporcionan la función y el comportamiento deseado, estructuras de datos que facilitan a los programas manipular adecuadamente la información, y documentos que describen la operación y el uso de los programas.
 % \\\\
-\textit{Pressman} define el software como el conjunto de \textbf{código, estructuras de datos y documentación} asociados a un sistema, y particularmente a un sistema computacional.
+\textit{Pressman} define el software como el conjunto de \textbf{código, estructuras de datos y documentación} asociados a un sistema computacional. Es habitualmente, el componente de un sistema que presenta mayores problemas durante el desarrollo.
+
+\paragraph{Ingeniería del Software}
+Es aquella disciplina que se encarga de establecer un orden en el desarrollo de sistemas de software.
+
+\paragraph{Crisis del software}
+Durante los primeros años del desarrollo del software, al no utilizarse metodología ninguna, los programas contenian numerosos errores e inconsistencias que obligaban a continuas modificaciones. Al final, se hacía más rápido y, por lo tanto barato, empezar de cero a realizar un software, que acabaría presentando los mismos problemas.
 
 \section{Características}
-El software se diferencia de los productos de otras ingenierías por lo siguiente:
+Principalmente, el software se diferencia al presentar una \textbf{naturaleza lógica} (es inmaterial); por ello, se dice que el \textbf{software se desarrolla, no se fabrica} en sentido estricto.  A pesar de muchas similitudes (fases de análisis, diseño, etc.), el software se diferencia de los productos de otras ingenierías por lo siguiente:
 \begin{enumerate}
 
-    \item \textbf{Curva de fallos con respecto al tiempo diferente}:
-          El software no se estropea con el tiempo, sin embargo es común aplicar ciertos cambios al mismo durante su ciclo de vida, lo cual va degradando su calidad de manera irreversible.
+    \item \textbf{Costes de replicación negligibles}:
+          En el caso del software, la mayor parte de la inversión se concentra en las fases de ingeniería previas a la producción, dado que, al ser un producto inmaterial, la replicación del producto no presenta problemas técnicos, no requiere un control individualizado, y el coste unitario resulta prácticamente nulo.
           \begin{figure}[h]
-              \centering
-              \includegraphics[width=0.4\textwidth]{Resources/fallosSoftwareReales.png}
-              \includegraphics[width=0.4\textwidth]{Resources/fallosHardware.png}
-              \caption{Curva de fallos del Software(Izquierda) y del Hardware(Derecha). Obsérvese como en el caso del software el índice de fallos se va acumulando.}
-          \end{figure}
+            \centering
+            \includegraphics[width=0.8\textwidth]{Resources/Tema1/CostesProduccion.png}
+            \caption{Influencia de los costes de ingeniería en el coste total del producto.}
+        \end{figure}
+          
+    \item \textbf{Curva de fallos con respecto al tiempo diferente}:
+          El software no se estropea con el tiempo; sin embargo es común aplicar ciertos cambios al mismo durante su ciclo de vida debidos al mantenimiento. Por ello, es probable que se introduzcan nuevos errores, que se acumulan con el tiempo, degradando la calidad. \textbf{El software no se estropea, pero se deteriora}.
+          \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.4\textwidth]{Resources/fallosSoftwareReales.png}
+            \includegraphics[width=0.4\textwidth]{Resources/fallosHardware.png}
+            \caption{Curva de fallos del Software (Izquierda) y del Hardware (Derecha). Obsérvese como en el caso del software el índice de fallos se va acumulando. Idealmente, el software solo presentaría fallos al principio de su vida por errores no detectados durante el desarrollo.}
+        \end{figure}
     \item \textbf{Baja reutilización de las partes}:
-          Por lo general el software se construye a medida como un conjunto, provocando que la reutilización sea baja. Existe una tendencia al alza en la reutilización gracias a:
+          Por lo general el software se construye a medida como un conjunto, provocando que la reutilización sea baja; consecuentemente, se perjudica el desarrollo del software. Existe una tendencia al alza en la reutilización de artefactos (no tienen por qué ser código) gracias a:
           \begin{itemize}
               \item La elaboración de librerías y frameworks.
-              \item Aplicación de técnicas de programación modular y orientada a objetos de manera estructurada.
-              \item Aplicación de patrones de diseño, que supone en sí misma la reutilización de la estructura ahorrando tiempo en diseño y formación.
+              \item Aplicación de técnicas de programación estructurada, modular y orientada a objetos.
+              \item Aplicación de patrones de diseño, que supone el poder reutilizar diseños, el lugar de solo código.
           \end{itemize}
+          Una empresa debería identificar los artefactos reutilizables con los que cuente, para que sus empleados los utilicen.
 \end{enumerate}
 
 \section{Atributos deseables en el software}
+Todo software debería contar con las siguientes características:
 \begin{itemize}
     \item \textbf{Mantenibilidad}: Facilidad para realizar cambios.
     \item \textbf{Confiabilidad}: Capacidad para seguir funcionando de manera segura y correcta.
@@ -34,13 +51,13 @@ El software se diferencia de los productos de otras ingenierías por lo siguient
 \end{itemize}
 
 \subsection{Aplicaciones del software}
-Es difícil clasificarlas y carece de mucho valor hacerlo, \textit{Pressman} lo hace de la siguiente forma, si pregunta características no es difícil deducirlas:
+Es difícil clasificarlas y carece de mucho valor hacerlo. \textit{Pressman} lo hace de la siguiente forma:
 \begin{itemize}
-    \item \textbf{Software de sistemas}: Sistemas operativos.
+    \item \textbf{Software de sistemas}: Sirven a otros programas.
     \item \textbf{Software de aplicación}: Programas independientes que resuelven una necesidad específica.
-    \item \textbf{Software científico y de ingeniería}: Simulaciones.
-    \item \textbf{Software empotrado}: Corre él solo en un chip.
-    \item \textbf{Software de línea de productos}: \textit{Middleware}.
+    \item \textbf{Software científico y de ingeniería}: ``Devoradores de números''.
+    \item \textbf{Software empotrado}: Reside en una memoria de sólo lectura de pequeños chips, y con funciones limitadas y muy específicas.
+    \item \textbf{Software de línea de productos}: \textit{Middleware}; cuentan con una capacidad específica que muchos clientes pueden usar (procesador de textos, por ejemplo).
     \item \textbf{Aplicaciones web}.
     \item \textbf{Inteligencia artificial}: \textit{Redes neuronales} (máquinas de estados \textbf{NO}).
 \end{itemize}
@@ -48,13 +65,13 @@ El objetivo de todo software es desempeñar una determinada función cumpliendo 
 
 \section{Software heredado}
 Se trata de software \textbf{desarrollado hace décadas} %CORBA 
-que además \textbf{ha ido sufriendo cambios} a lo largo del tiempo. Estos dos factores hacen que sea muy difícil de tratar, \uline{y usualmente es crítico para los negocios} (COBOL). \textit{Pressman} aconseja tocarlo lo mínimo posible.
+que además \textbf{ha ido sufriendo cambios} a lo largo del tiempo para adaptarse a los requisitos cambiantes del negocio. Estos dos factores hacen que sea muy difícil, y por lo tanto caro, de tratar, \uline{y usualmente es crítico para los negocios} (COBOL). Como es de esperar, probablemente se sustente sobre procesos de desarrollo desfasados, y malas prácticas (falta de documentación, por ejemplo). \textit{Pressman} aconseja tocarlo lo mínimo posible, al menos mientras no sea necesario.
 
 \section{Principales problemas asociados a la producción del software}
-Muchos expertos argumentan que la crisis del software nunca se ha solucionado, y es que esta ingeniería arrastra desde hace tiempo los siguientes \textbf{problemas crónicos}.
+Muchos expertos argumentan que la crisis del software nunca se ha solucionado, y es que esta ingeniería arrastra desde hace tiempo los siguientes \textbf{problemas crónicos}, causados por las propias características del software y por los errores de quiénes intervienen en su producción:
 \begin{enumerate}
-    \item \textbf{Imprecisión en la estimación de costes temporales y monetarios}: Entre las causas podemos citar la falta de recogida de datos de proyectos anteriores y la tradicional falta de experiencia de los gestores (gente que no tiene ni idea de software gestionando proyectos o viceversa).
-    \item \textbf{Baja productividad}: El poco énfasis en la recogida de requisitos comúnmente desemboca en tiempo de desarrollo malgastado. Ya bien sea implementando funcionalidad innecesaria o bien por implementarla en un estado de desarrollo avanzado, lo cual es mucho más costoso.
-    \item \textbf{Mala calidad}: La falta de realización de pruebas, debida en gran medida a los fallos anteriores, propicia la entrega de software con muchos errores.
-    \item \textbf{Insatisfacción del cliente}: Debida a los problemas anteriores no es una tarea agradable contratar software.
+    \item \textbf{Imprecisión en la planificación, y estimación de costes temporales y monetarios}: Es frecuente que surjan imprevistos al abordar proyectos de cierta complejidad, dando lugar a desviaciones. Además, sin una planificación detallada, es imposible hacer una estimación de costes e identificar las tareas conflictivas. Entre las causas podemos citar la falta de recogida de datos de proyectos anteriores (no acumular experiencia), y la tradicional falta de experiencia de los gestores de proyecto (gente que no tiene ni idea de software gestionando proyectos o viceversa).
+    \item \textbf{Baja productividad}: Los proyectos de software tienen a una duración mayor a lo esperada y, por lo tanto, mayores costes, y menor productividad y beneficios. Entre los múltiples motivos, se encuentran las especificaciones ambiguas o incorrectas, la poca comunicación con el cliente hasta la entrega, con sus consecuentes cambios de última hora, y la falta de documentación. Este problema culmina con que sea más costoso realizar una modificación sobre un programa que el rehacerlo.
+    \item \textbf{Mala calidad}: El que las especificaciones sean ambiguas o incorrectas, junto con falta de realización de pruebas exahustivas, propicia la entrega de software con muchos errores, y por lo tanto incrementa los costes durnte el mantenimiento.
+    \item \textbf{Insatisfacción del cliente}: Debida a los problemas anteriores, los clientes suelen quedar poco satisfechos con los resultados.
 \end{enumerate}
