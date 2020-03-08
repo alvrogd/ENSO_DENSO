@@ -21,28 +21,54 @@
 \usepackage{footnote}
 \usepackage{pdfpages}
 \usepackage{enumerate}
+\usepackage{titling}
 \newcommand\blankpage{%
     \null
     \thispagestyle{empty}%
     \addtocounter{page}{-1}%
     \newpage}
 % Necesitamos resetear las secciones en cada tema
+% Redefinición del comando para hacer el título, y que se centre horizontal y verticalmente
 \makeatletter 
 \@addtoreset{section}{part}
 \makeatother  
+\makeatletter
+\renewcommand{\@maketitle}{%
+\newpage
+\null
+\vfill
+\begingroup
+\let\footnote\thanks
+\centering
+{\LARGE\@title}\vskip1.5em
+{\large\@author}\vskip1em
+{\large\@date}\vskip0.1em
+\endgroup
+\vfill
+}
+\makeatother
+
+\title{Ingeniería del Software}
+\author{Escuela Técnica Superior de Ingeniería\\Universidad de Santiago de Compostela}
+\date{Curso 2019--2020}
 
 \begin{document}
 \renewcommand\partname{Tema} %Cambio de "parte" por "tema"
-\includepdf{Resources/PORTADA.pdf}
-\blankpage
-% Portada de los apuntes de ENSO
-% RESUMEN DE ENSO
-% AHORA CON MÁS RABO! (mensaje superior derecha)
-% INCLUYE PREGUNTAS DE EXAMEN! (en vertical)
-% EDICIÓN ESPECIAL TABOADA 2016-2017(mensaje inferior izquierda)
 
+% PORTADA
+\pagenumbering{gobble}% Remove page numbers (and reset to 1)
+\maketitle
+\newpage
+
+% DISCLAIMER
+\input{disclaimer.tex}
+\blankpage
+
+% ÍNDICE
+\pagenumbering{arabic}
 \tableofcontents
 \newpage
+% CADA TEMA
 \input{tema1.tex}
 \newpage
 \input{tema2.tex}
@@ -64,6 +90,6 @@
 \input{casosPractico2014.tex}
 \newpage
 \input{casosPractico2013.tex}
-\newpage
-\includepdf{Resources/CONTRAPORTADA}
+% \newpage
+%\includepdf{Resources/CONTRAPORTADA}
 \end{document}
