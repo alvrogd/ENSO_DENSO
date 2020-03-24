@@ -42,7 +42,7 @@ El ciclo de vida en cascada es el más antiguo, surgido directamente de la copia
 
    \item \textbf{Ingeniería y análisis del sistema}: Define las interrelaciones del software con otros elementos del sistema más complejo en el que esté englobado; es decir, se asignan funciones del sistema al software. Por tanto, comprende los requisitos globales a nivel de sistema, mediante un análisis y diseño a alto nivel.
 
-   \item \textbf{Análisis de requisitos del software}: Análisis detallado de los componentes del sistema implementados mediante software incluyendo \textbf{datos} a manejar, \textbf{funciones} a desarrollar, \textbf{interfaces}, y \textbf{rendimiento} esperado.
+   \item \textbf{Análisis de requisitos del software}: Análisis detallado de los componentes del sistema implementados mediante software, incluyendo \textbf{datos} a manejar, \textbf{funciones} a desarrollar, \textbf{interfaces}, y \textbf{rendimiento} esperado.
    
    \textbf{Nota:} \textit{Los requisitos, tanto del sistema como del software, deben documentarse y revisarse con el cliente.}
 
@@ -56,11 +56,11 @@ El ciclo de vida en cascada es el más antiguo, surgido directamente de la copia
 
    \item \textbf{Utilización}: Entrega del software al cliente y comienzo de su vida útil. Es una etapa que se solapa con las posteriores.
    
-   \item \textbf{Mantenimiento}: El software sufrirá cambios a lo largo de su vida útil debido a que el cliente detecte errores, que se produzcan cambios en alguno de los componentes del sistema, o que el cliente requiera modificaciones funcionales. Estos cambios requieren volver atrás en el ciclo de vida (etapas de codificación, diseño o incluso análisis), en función de la magnitud del cambio.
+   \item \textbf{Mantenimiento}: El software sufrirá cambios a lo largo de su vida útil debido a que el cliente detecte errores, que se produzcan cambios en alguno de los componentes del sistema, o que el cliente requiera modificaciones funcionales. Estos cambios requieren volver atrás en el ciclo de vida (etapas de codificación, diseño o incluso análisis), en función de la magnitud del cambio.\\
    
-   \textbf{Nota:} \textit{El modelo en cascada, a pesar de ser lineal, contiene flujos que permiten la vuelta atrás. Además del mantenimiento, se puede volver desde cualquier fase a la anerior si se detectan fallos. Estas vueltas atrás no son controladas y quedan reflejadas en el modelo.}
+   \textbf{Nota:} \textit{El modelo en cascada, a pesar de ser lineal, contiene flujos que permiten la vuelta atrás. Además del mantenimiento, se puede volver desde cualquier fase a la anterior si se detectan fallos. Estas vueltas atrás no son controladas y tampoco quedan reflejadas en el modelo.}
 
-  \item \textbf{Sustitución}: Cualquier aplicación acaba siendo sistituida. Es una tarea que debe planificarse cuidadosamente y, si es posible por fases:
+  \item \textbf{Sustitución}: Cualquier aplicación acaba siendo sustituida. Es una tarea que debe planificarse cuidadosamente y, si es posible, por fases:
   
   \begin{enumerate}
       \item Trasvase de la información que maneja el sistema viejo al formato del nuevo.
@@ -72,20 +72,20 @@ El ciclo de vida en cascada es el más antiguo, surgido directamente de la copia
 \subsection{Aportaciones}
 \begin{itemize}
    \item Es el más simple, conocido y fácil de usar.
-   \item Los procesos definidos se \textbf{formalizan} en normas, \textit{sabes lo que tienes que hacer en cada momento}.
-   \item Permite generar software eficientemente, y de acuerdo a las especificaciones: no sobrepasar fechas de entrega ni costes esperados.
-   \item Al final de cada fase, los interesados pueden comprobar el estado del proyecto.
+   \item Los procesos definidos se \textbf{formalizan} en normas, por lo que \uline{sabes lo que tienes que hacer en cada momento}.
+   \item Permite generar software eficientemente, y de acuerdo a las especificaciones, evitando así sobrepasar fechas de entrega o costes esperados.
+   \item Los interesados pueden comprobar el estado del proyecto al final de cada fase.
 \end{itemize}
 
 \subsection{Problemas}
 \begin{itemize}
    \item En realidad los \textbf{proyectos no siguen un ciclo de vida estrictamente secuencial}, sino que siempre hay iteraciones. Un claro ejemplo de ello es la fase de mantenimiento, aunque es frecuente detectar errores en cualquiera de las otras fases. 
-   \item No siempre se pueden establecer los requisitos desde el primer momento, sino lo normal es que se vayan aclarando y refinando a lo largo de todo el proyecto. Es habitual que los clientes no tengan el conocimiento de la importancia de la fase de análisis, o bien no hayan pensado en detalle qué quieren del software.
+   \item No siempre se pueden establecer los requisitos desde el primer momento, sino que lo normal es que se vayan aclarando y refinando a lo largo de todo el proyecto. Es habitual que los clientes no tengan el conocimiento de la importancia de la fase de análisis, o bien que no hayan pensado en detalle qué quieren del software.
    \item Hasta que se llega a la fase final, no se dispone de una versión operativa del programa. Esto no resulta óptimo, dado que la mayor parte de los fallos suelen detectarse una vez el cliente puede probar el programa; al final del proyecto, es cuando más costosos son de corregir, y cuando más prisas hay.
    \item Se producen estados de bloqueo, dado que una fase no puede comenzar sin los documentos de salida de la anterior.
 \end{itemize}
 
-\textbf{Nota:} \textit{A pesar de ello, es mucho mejor desarrollar software siguiendo el modelo de ciclo de vida en cascada, que hacerlo sin ningún tipo de guías.}
+\textbf{Nota:} \textit{A pesar de todo ello, es mucho mejor desarrollar software siguiendo el modelo de ciclo de vida en cascada, que hacerlo sin ningún tipo de guías.}
 
 
 \section{Construcción de prototipos}
@@ -102,14 +102,14 @@ Este ciclo de vida palia directamente las deficiencias del ciclo de vida en casc
 \begin{itemize}
    \item Resulta idóneo en \textbf{proyectos con un nivel alto de incertidumbre}, donde los requisitos no están nada claros en primera instancia, ya que se provee un \textbf{método para obtener los requisitos de forma fiable} a través del feedback del usuario. Por lo tanto, debería omitirse ante problemas bien comprendidos.
    \item También es de especial interés en aplicaciones que presenten mucha interacción con el usuario, o algoritmos evolutivos.
-   \item La aplicación no debe contar con una gran complejidad, o las ventajas de la construcción de prototipos se verán superadas por el esfuerzo de un prototipo que habrá que desechar o modiificar mucho.
+   \item La aplicación no debe contar con una gran complejidad, o las ventajas de la construcción de prototipos se verán superadas por el esfuerzo de un prototipo que habrá que desechar o modificar mucho.
    \item El cliente debe estar dispuesto a probar un prototipo.
 \end{itemize}
 
 %Foto de ciclo prototipos
 \begin{figure}[H]
    \centering
-   \includegraphics[width=0.7\linewidth]{Resources/construccionPrototipos.png}
+   \includegraphics[width=0.5\linewidth]{Resources/construccionPrototipos.png}
    \caption{Etapas del paradigma de la construcción de prototipos.}
    \label{fig:construccionPrototipos}
 \end{figure}
@@ -117,9 +117,9 @@ Este ciclo de vida palia directamente las deficiencias del ciclo de vida en casc
 \subsection{Beneficios de los prototipos}
 
 \begin{itemize}
-   \item Permiten probar la eficiencia en condiciones similares a las que existirán durante la Utilización del sistema.
+   \item Permiten probar la eficiencia en condiciones similares a las que existirán durante la utilización del sistema.
    \item Permiten mostrar al cliente la E/S de datos en la aplicación, para detectar problemas en la especificación.
-   \item Gran parte del trabajo realizado puede ser utilizado en el diseño final. El diseño se paracerá cada vez más al del producto final, meintras que los componentes codificados deberán ser generalmente optimizados.
+   \item Gran parte del trabajo realizado puede ser utilizado en el diseño final. El diseño se parecerá cada vez más al del producto final, mientras que los componentes codificados deberán ser generalmente optimizados.
    \item Los prototipos permiten analizar \textbf{alternativas y viabilidades}, refinando el resultado final o abortándolo antes de invertir demasiado dinero en el mismo.
 \end{itemize}
 
@@ -128,7 +128,7 @@ Este ciclo de vida palia directamente las deficiencias del ciclo de vida en casc
 \begin{itemize}
    \item En papel o ejecutable, que describa la interacción con el usuario.
    \item Que implemente subconjuntos de la funcionalidad requerida, para evaluar el rendimiento.
-   \item Que realice todo o en parte, pero con características que todavía deban ser mejoradas.
+   \item Que realice todo o en parte, pero con características que todavía deban ser mejoradas, o incluso simulando la funcionalidad del \textit{back-end} de la aplicación.
 \end{itemize}
 
 \subsection{Construcción de un prototipo}
@@ -136,25 +136,23 @@ Este ciclo de vida palia directamente las deficiencias del ciclo de vida en casc
 \begin{enumerate}
    \item Realizar un modelo del sistema a partir de los requisitos conocidos. No es necesario realizar una definición completa de estos.
    \item Diseñar rápidamente el prototipo, centtrándose en la arquitectura del sistema y en las interfaces, antes que en aspectos procedimentales.
-   \item Construir el prototipo, mediante una codificación rápiday que facilite el desarrollo incremental. Es irrelevante la calidad obtenida.
+   \item Construir el prototipo, mediante una codificación rápida y que facilite el desarrollo incremental. Es irrelevante la calidad obtenida.
    \item Presentar el prototipo al cliente para que lo pruebe y sugiera modificaciones.
    \item Con estos comentarios, proceder a construir un nuevo prototipo, y así sucesivamente, hasta que los requisitos queden completamente formalizados y se pueda comenzar a desarrollar el producto final.
 \end{enumerate}
 
-\textbf{Nota:} \textit{Como se puede comprobar, el prototipado es una técnica que sirve fundamentalmente para la fase de análisis de requisitos.}\\
-
-\textbf{Nota:} \textit{El prototipo no es el sistema final.}
+\textbf{Nota:} \textit{Como se puede comprobar, el prototipado es una técnica que sirve fundamentalmente para la fase de análisis de requisitos. Por lo tanto, el prototipo \uline{no es el sistema final}.}
 
 \subsection{Problemas}
 \begin{itemize}
    \item En muchas ocasiones, el prototipo, que carece de calidad, pasa a ser parte del sistema final por presiones, o bien por que los técnicos se hayan acostumbrado a él.
-   \item Es \textbf{posible que nunca se llegue a la fase de construcción} por falta de recursos, lo cual da lugar a los problemas característicos de un software construido sin seguir procesos de ingeniería al emplear el prototipo como sistema final.
+   \item Es \textbf{posible que nunca se llegue a la fase de construcción final} (es decir, del sistema final) por falta de recursos, lo cual da lugar a los problemas característicos de un software construido sin seguir procesos de ingeniería al emplear el prototipo como sistema final.
    \item Es imposible una \textbf{predicción de costes} fiable.
 \end{itemize}
 
 
 \section{Ciclo de vida incremental}
-% foto de incrementos
+
 \begin{figure}[H]
    \centering
    \includegraphics[width=0.7\linewidth]{Resources/cicloIncremental.png}
@@ -164,9 +162,11 @@ Este ciclo de vida palia directamente las deficiencias del ciclo de vida en casc
 
 Combina elementos del \textbf{modelo lineal} en cascada con la \textbf{filosofía iterativa} de construcción de prototipos. Para ello, se va creando el sistema software mediante incrementos, aportando nuevas funcionalidades o requisitos. De este modo el software ya no se ve como un producto con una fecha de entrega, sino como una \textbf{integración de sucesivos refinamientos}.\\
 
-A diferencia del modelo por prototipos, el incremental se centra en obtener un producto operativo en cada iteración; los primeros incrementos simplemente son versiones incompletas del producto final.
+En comparación al modelo por prototipos, el incremental se centra en obtener un producto operativo en cada iteración, en lugar de simples prototipos; los primeros incrementos simplemente son versiones incompletas del producto final.
 
 \paragraph{Incrementos} Componentes funcionales del sistema. Cada incremento es una parte completa y funcional del sistema por sí misma.
+
+\textbf{Nota:} \textit{En relación a la figura mostrada, el analizar solo al principio los requisitos del sistema sería suficiente generalmente, e incluso ni siquiera sería necesario volver al análisis del software en sucesivas iteraciones si está bien claro qué hacer desde el principio, y el equipo de desarrollo se encuentra seguro de ello.}
 
 \subsection{Sistemas que resultan ser buenos candidatos}
 
@@ -186,13 +186,13 @@ A diferencia del modelo por prototipos, el incremental se centra en obtener un p
 \subsection{Desventajas}
 
 \begin{itemize}
-   \item Dado que la parte de requisitos no se encuentra en la fase iterativa, es difícil ver si estos son válidos, y se siguen detectando relativamente tarde, al haberse construido ya productos operativos en cada iteración (mismos problemas que con el ciclo en cascada).
+   \item Si la parte de requisitos no se encuentra en la fase iterativa, es difícil ver si estos son válidos, y se siguen detectando los errores relativamente tarde, al haberse construido ya productos operativos en cada iteración (mismos problemas que con el ciclo en cascada). Y, aunque se realice una fase de análisis en cada iteración, al no haber un contacto con el cliente hasta dar por finalizado el incremento, los requisitos mal interpretados siguendo siendo detectados relativamente tarde.
 \end{itemize}
 
 
 \section{Técnicas de cuarta generación}
 
-Son un conjunto diverso de métodos y herramientas con el objetivo de facilitar el desarrollo de software, al permitir especificar características del software a alto nivel, y generar código fiente automáticamente a partir de estas especificaciones:
+Son un conjunto diverso de métodos y herramientas con el objetivo de facilitar el desarrollo de software, al permitir especificar características del software a alto nivel, y generar código fuente automáticamente a partir de estas especificaciones:
 
 \begin{itemize}
    \item Acceso a bases de datos utilizando lenguajes de consulta de alto nivel, sin ser necesario conocer la estructura de esta.
@@ -210,7 +210,7 @@ A pesar de ello, estas técnicas no han obtenido los resultados previstos cuando
 \begin{itemize}
    \item No son más fáciles de utilizar que los lenguajes de tercera generación.
    \item El código fuente que producen es ineficiente.
-   \item Solo son generalmente aplicables al software de gestión.
+   \item Generalmente, solo son aplicables al software de gestión.
 \end{itemize}
 
 
@@ -230,14 +230,14 @@ Es un \textbf{modelo iterativo que combina las principales ventajas del modelo d
 
 \subsection{Descripción del modelo}
 
-El proceso se representa como una espiral, en donde cada ciclo representa una fase del proceso, en función de lo que mejor se ajuste al proyecto; por ejemplo, el ciclo más interno puede relacionarse con la factibilidad, el siguiente con la definición de requistios, el siguiente, con el diseño, etc. Siempre se actúa en función a los riesgos que el proyecto presente, y por ello se incluyen las actividades de la gestión de riesgos para reducirlos.
+El proceso se representa como una espiral, en donde cada ciclo representa una fase del proceso, en función de lo que mejor se ajuste al proyecto; por ejemplo, el ciclo más interno puede relacionarse con la factibilidad, el siguiente con la definición de requisitos, el siguiente con el diseño, etc. Siempre se actúa en función a los riesgos que el proyecto presente, y por ello se incluyen las actividades de la gestión de riesgos para reducirlos.\\
 
 Se definen un total de cuatro sectores:
 
 \begin{enumerate}
    \item \textbf{Definición de objetivos}: Objetivos de la fase actual y restricciones con las que deben alcanzarse. Finaliza con la identificación de diferentes alternativas que permitirían alcanzar estos objetivos.
    \item \textbf{Análisis de riesgos}: Se identifican los riesgos de las diferentes alternativas, así como tratarlos, con el objetivo de escoger una de las alternativas.
-   \item \textbf{Desarrollo y validación}: Se realiza el análisis de viabilidad de las alternativas y, si se ha reducido el riesgo a niveles aceptables, se realizan las actividades de ingeniería que construyen el producto; es decir, se general entregables de los procesos clásicos, siguiendo, por ejemplo, un ciclo en cascada.
+   \item \textbf{Desarrollo y validación}: Se realiza el análisis de viabilidad de las alternativas y, si se ha reducido el riesgo a niveles aceptables, se realizan las actividades de ingeniería que construyen el producto; es decir, se generan entregables de los procesos clásicos, siguiendo, por ejemplo, un ciclo en cascada.
    \item \textbf{Revisión y planificación}: \uline{Todas las personas implicadas}, incluso clientes, revisan los productos desarrolladores y se planificaría la ejecución del siguiente ciclo. Se finaliza con la toma de decisión de finalizar o continuar el proyecto.
 \end{enumerate}
 
@@ -255,21 +255,21 @@ Se definen un total de cuatro sectores:
 
 \subsection{Desventajas}
 \begin{itemize}
-   \item El modelo en espiral se adapta bien a los desarrollos internos, pero necesita un ajuste para la contración de software, al no contar con la flexibilidad para ajustar el desarrollo etata por etapa (por ejemplo, aplazar decisiones, pararse en miniespirales para realizar secciones críticas con precaución, etc.).
-   \item Requiere expertos en la evaluació de riesgos, para realizar evaluaciones apropiadas y no abocarse al desastre.
+   \item El modelo en espiral se adapta bien a los desarrollos internos, pero necesita un ajuste para la contratación de software, al no contar con la flexibilidad para ajustar el desarrollo etapa por etapa (por ejemplo, aplazar decisiones, pararse en miniespirales para realizar secciones críticas con precaución, etc.).
+   \item Requiere expertos en la evaluación de riesgos, para realizar evaluaciones apropiadas y no abocarse al desastre.
    \item Resulta difícil de controlar, y de convencer al cliente de que es manejable.
 \end{itemize}
 
-\textbf{Nota:} \textit{En todo caso, podría plantearse la realización de un contracto como una iteración del ciclo en espiral}.
+\textbf{Nota:} \textit{En todo caso, podría plantearse la realización de un contrato como una iteración del ciclo en espiral}.
 
 
 \subsection{Análisis de riesgos}
 
 \subsubsection{Definiciones}
 
-\paragraph{Activos} Elementos de un sistema de información que soportan los objetivos de la organización (presentan un cierto valor). Por ejemplo: equipamiento, redes de comunicación, instalaciones, personas, etc.
+\paragraph{Activos} Elementos de un sistema de información que soportan los objetivos de la organización, y por lo que presentan un cierto valor. \textit{Por ejemplo: equipamiento, redes de comunicación, instalaciones, personas, etc.}
 
-\paragraph{Amenazas} Qué puede pasarles a los activos, perjudicándolos consecuentemente. Pueden ser de origen natural, del entorno de trabajo, por defectos en el producto, y causados por las personas de forma accidental o deliberada.
+\paragraph{Amenazas} Qué puede pasarles a los activos, perjudicándolos consecuentemente. Pueden ser de origen natural, del entorno de trabajo, por defectos en el producto, o causados por las personas de forma accidental o deliberada.
 
 \paragraph{Contramedidas} Medidas de protección desplegadas para que las amenazas no causen tanto daño.
 
@@ -295,19 +295,19 @@ Consta de cuatro actividades principales:
       
       \begin{itemize}
          \item Del negocio: Afectan a la organización (riesgos de mercado, mala reputación\ldots).
-         \item Del proyecto: Afectan a la calendarización y los recursos.
+         \item Del proyecto: Afectan a la calendarización y a los recursos.
          \item Del producto: Afectan a la calidad del producto.
       \end{itemize}
 
-   \item \textbf{Análisis de riesgos}: Se evalua, empleando una escala a intervalos y según la experiencia de los expertos, la probabilidad de que cada riesgo ocurra (baja, moderada y alta, por ejemplo), así como sus consecuencias o impacto (catastrófico, grave, tolerable y e insignificante, por ejemplo). A pesar de emplear una escala a intervalos, cada uno de estos debe sustentarse sobre medidas objetivas; por ejemplo, un riesgo tolerable será aquel cuyo impacto no excede los márgenes temporales o económicos del proyecto. Esta actividad concluye con la elaboración de una lista ordenada de riesgos por importancia.
+   \item \textbf{Análisis de riesgos}: Se evalúa, empleando una escala a intervalos y según la experiencia de los expertos, la probabilidad de que cada riesgo ocurra (baja, moderada y alta, por ejemplo), así como sus consecuencias o impacto (catastrófico, grave, tolerable e insignificante, por ejemplo). A pesar de emplear una escala a intervalos, cada una de estas valoraciones debe sustentarse sobre medidas objetivas, por lo que se emplearán \uline{medidas objetivas para estimar subjetivamente las consecuencias}; por ejemplo, un riesgo tolerable será aquel cuyo impacto no excede los márgenes temporales o económicos del proyecto. Esta actividad concluye con la elaboración de una lista ordenada de riesgos por importancia.
 
    \item \textbf{Planificación de riesgos}:
          Tras escoger aquellos riesgos más prioritarios, se establecen estrategias para gestionarlos, en base a la experiencia de nuevo:
          \begin{itemize}
             \item Estrategias de prevención.
             \item Estrategias de minimización.
-            \item Planes de contingencia: estar preparados para lo peor.
-            \item Transferencia: subcontratación de expertos que gestionen y \uline{se responsabilicen} de la gestión del riesgo.
+            \item Planes de contingencia: Estar preparados para lo peor.
+            \item Transferencia: Subcontratación de expertos que gestionen y \uline{se responsabilicen} de la gestión del riesgo; dicho de otro modo, si sucede algún problema, la responsabilidad es exclusiva al experto subcontratado (\textit{por ejemplo, deberán llevar a cabo indemnizaciones\ldots}).
          \end{itemize}
    \item \textbf{Gestión de riesgos}: Supervisar el desarrollo del proyecto continuamente, de forma que se detecten los riesgos tan pronto como aparezcan. Para ello, se definen indicadores cuatificables para cada riesgo, así como sus umbrales de alerta.
 \end{enumerate}
@@ -334,29 +334,28 @@ Cabe destacar, en todo lo visto hasta el momento, el esfuerzo puesto en:
    \item Modificar los documentos resultantes, dado que no permanecen inmutables en el tiempo.
 \end{itemize}
 
-Como se puede ver, estas metodologías pesadas presentan una aproximación sistemática y disciplinada, con procesos fuertemente orientados a la documentación: la documentación no es un objetivo sino el medio para lograrlo y con calidad, y el formalismo da calidad a pesar de ralentizar el desarrollo.
-%Sorprendente estos dos párrafos están bien.
+Como se puede ver, estas metodologías pesadas presentan una aproximación \uline{sistemática y disciplinada}, con procesos fuertemente orientados a la \uline{documentación}: la documentación no es un objetivo sino el medio para lograrlo y con calidad, y el formalismo da calidad a pesar de ralentizar el desarrollo.\\
 
-El desarrollo ágil defiende la renuncia a utilizar estos modelos perfectos, se basa únicamente en que sean lo \uline{suficientemente buenos}. Tratan de \textbf{centrar los esfuerzos en presentar un incremento software ejecutable}, restando importancia a los productos de trabajo intermedio, que no siempre es bueno.\\
+El desarrollo ágil defiende la renuncia a utilizar estos modelos perfectos, y se basa únicamente en que sean lo \uline{suficientemente buenos}. Tratan de \textbf{centrar los esfuerzos en presentar un incremento software ejecutable}, restando importancia a los productos de trabajo intermedio; de todos modos, esto no siempre es bueno.\\
 
 En el manifiesto para el desarrollo ágil, firmado por \textit{Kent Beck} entre otros, se establecía la valoración de:
 
 \begin{itemize}
    \item Individuos e intenciones sobre los procesos.
-   \item software en funcionamiento sobre la documentación.
+   \item Software en funcionamiento sobre la documentación.
    \item Colaboración con el cliente sobre el contrato.
    \item Respuesta al cambio sobre el seguimiento de un plan.
 \end{itemize}
 
-Como se puede ver, estos modelos resultan ser una corriente opuesta a la tradicional, no con el objetivo de eliminarlos, sino de solventar sus limitadas capacidades de adaptación al cambio, dada la fragilidad de los requisitos y la variabilidad del entorno, y la disciplina de trabajo exigida a las personas.\\
+Como se puede ver, estos modelos resultan ser una corriente opuesta a la tradicional, no con el objetivo de eliminarlos, sino de \uline{solventar sus limitadas capacidades de adaptación al cambio}, dada la fragilidad de los requisitos y la variabilidad del entorno, y la disciplina de trabajo exigida a las personas.\\
 
 \subsection{Variabilidad del entorno}
 
-Las metodologías ligeras proponen una aproximación incremental en donde se valora la entrega frecuente; por ejemplo, desarrollando incrementos tras un par de semanas o de meses. Estos son valorados por el cliente, entrando a ser partícipe del proceso de software, para que ofrezca el \textit{feedback} necesario, como nuevos requisitos o prioridades.
+Las metodologías ligeras proponen una aproximación incremental en donde se valora la \uline{entrega frecuente}; por ejemplo, desarrollando incrementos tras un par de semanas o de meses. Estos son valorados por el cliente, entrando a \uline{ser partícipe del proceso de software}, para que ofrezca el \textit{feedback} necesario, como nuevos requisitos o prioridades.
 
 \subsection{Fragilidad por las debilidades humanas}
 
-En contraposición a exigir una gran disciplina al personal para asegurar que los procesos se desarrollan correctamente, las metodologías ligeras aceptan tolerancia en la aplicación de los modelos, permitiendo que estos se adapten al equipo, y no al revés.\\
+En contraposición a exigir una gran disciplina al personal para asegurar que los procesos se desarrollan correctamente, las metodologías ligeras aceptan \uline{tolerancia en la aplicación de los modelos}, permitiendo que estos se adapten al equipo, y no al revés.\\
 
 Algunos de los rasgos con los que las personas deberían contar son: competencia, enfoque común (entregar un incremento a tiempo), colaboración entre todos los \textit{stakeholders}, habilidades y técnicas para la toma de decisiones, capacidad de resolución de problemas ambigüos (debido al cambio), confianza y respeto mutuo, y organización propia para lograr los objetivos.
 
@@ -373,14 +372,14 @@ Algunos de los rasgos con los que las personas deberían contar son: competencia
 
 \subsection{Modelado ágil}
 
-A \textbf{alto nivel}, es una \textbf{colección de valores, pricipios y prácticas} (en resumen, buenas prácticas) que poder aplicar para realizar modelado y documentación de forma efectiva y ligera en un proyecto de desarrollo de software. Por ejemplo, es habitual la práctica de \textit{Test-Driven Development}, que consta a su vez de las dos prácticas de \textit{Test-First Development} y de refactorización.\\
+A \textbf{alto nivel}, es una \textbf{colección de valores, principios y prácticas} (en resumen, buenas prácticas) que poder aplicar para realizar el modelado y la documentación de forma efectiva y ligera en un proyecto de desarrollo de software. Por ejemplo, es habitual la práctica de \textit{Test-Driven Development}, que consta a su vez de las dos prácticas de \textit{Test-First Development} y de refactorización.\\
 
-Al final, el modelado ágil puede ser tomado más como una filosofía que como una metodología:
+Al final, el modelado ágil puede ser tomado más como una \uline{filosofía} que como una metodología:
 
 \begin{itemize}
    \item Modelar con un propósito: Trabajar siempre con un objetivo en mente.
    \item Conocer los modelos y notaciones disponibles, y usar el más apropiado para cada situación.
-   \item Viajar ligero: Conservar sólo la documentación o modelos que proporcionarán valor a largo plazo, y que deberán recibir por lo tanto un mantenimiento.
+   \item Viajar ligero: Conservar sólo la documentación o modelos que proporcionarán valor a largo plazo, y que deberán recibir por lo tanto un mantenimiento; lo demás tan solo supone esfuerzo invertido de forma innecesaria.
    \item El contenido es más importante que la representación: Solo es necesario que un modelo pueda ser interpretado por la audiencia a la que está dirigido.
    \item Adaptar a las necesidades del equpo.
 \end{itemize}
@@ -394,17 +393,18 @@ Al final, el modelado ágil puede ser tomado más como una filosofía que como u
    \label{fig:programacionExtrema}
 \end{figure}
 
-Utiliza, preferiblemente, un enfoque orientado a objetos, y abarca un conjunto de reglas y prácticas que ocurren las siguientes cuatro actiividades:
+Utiliza, preferiblemente, un enfoque orientado a objetos, y abarca un conjunto de reglas y prácticas que ocurren en las siguientes cuatro actividades:
 
 \begin{enumerate}
 
    \item \textbf{Planificación}:
          
       \begin{itemize}
-            \item \textbf{Creación de historias de usuario}: Describen características y funcionalidades requeridas (permiten establecer requisitos); cada historia se asemeja a un caos de uso, es escrita por el cliente, y este le asigna una prioridad.
-            \item \textbf{Estimación del tiempo de implementación}: Los miembros del equipo evalúan cada historia y asignan un coste en semanas de desrollo; si es superior a tres semanas, se segmenta la historia.\\
-            \textbf{Nota:} \textit{Pueden escribirse historias en cualquier momento.}
-            \item \textbf{Plan de construcción}: Los clientes y el equipo se reúnen para decidir qué historias hay en el siguiente incremento del software, priorizando siguiendo una de las siguientes vías:
+            \item \textbf{Creación de historias de usuario}: Describen características y funcionalidades requeridas (permiten establecer requisitos); cada historia se asemeja a un caso de uso, es escrita por el cliente, y este le asigna una prioridad.
+            \item \textbf{Estimación del tiempo de implementación}: Los miembros del equipo evalúan cada historia y asignan un coste en semanas de desarollo; si es superior a tres semanas, se segmenta la historia.\\
+            
+            \textbf{Nota:} \textit{Pueden escribirse historias en cualquier momento del desarrollo del proyecto, no solo en la tarea anterior.}
+            \item \textbf{Plan de construcción}: Los clientes y el equipo se reúnen para decidir qué historias hay en el siguiente incremento del software, priorizando unas sobre otras siguiendo una de las siguientes vías:
                   \begin{itemize}
                      \item Todas las historias serán implementadas de un modo inmediato.
                      \item Las historias con \textbf{valor más alto} se implementarán al \textbf{principio}.
