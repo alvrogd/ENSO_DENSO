@@ -1,3 +1,3 @@
 # ENSO DENSO
 
-El resumen definitivo. Incluye ejercicios prácticos.
+[Última versión de los apuntes en PDF.](main.pdf)

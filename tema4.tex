@@ -8,7 +8,7 @@ Como se puede prever, esta especificación se convierte en base de todas las act
 
 \subsection{Requisito}
 
-Se define como una condición o capacidad que necesita el usuario para resolver un problema o conseguir un objetivo determinado. Por extensión, se corresponde también con las condiciones o capacidades que debe cumplir o poseer un sistema para satisfacer un contrato, una norma o una especificación.
+Se define como una \uline{condición o capacidad que necesita el usuario para resolver un problema o conseguir un objetivo determinado}. Por extensión, se corresponde también con las condiciones o capacidades que debe cumplir o poseer un sistema para satisfacer un contrato, una norma o una especificación.
 
 \subsubsection{Características comunes a todos los requisitos}
 
@@ -23,15 +23,15 @@ Se define como una condición o capacidad que necesita el usuario para resolver 
 
 \subsubsection{Clasificación de los requisitos}
 \begin{itemize}
-    \item \textbf{Requisitos funcionales}: Servicios que proveerá el sistema, concretando de qué manera reaccionará a entradas particulares, y cómo se comportará en situaciones particulares; también declaran lo que el sistema no debe hacer. \textit{Ejemplo: El usuario tendrá la posibilidad de buscar por tamaño}.
+    \item \textbf{Requisitos funcionales}: Servicios que proveerá el sistema, concretando de qué manera reaccionará a entradas particulares, y cómo se comportará en situaciones particulares; también declaran lo que el sistema no debe hacer. \textit{Por ejemplo: el usuario tendrá la posibilidad de buscar por tamaño}.
     
     Si un requisito funcional no se cumple, el sistema se verá degradado al no contener toda su funcionalidad.
 
-    \item \textbf{Requisitos no funcionales}: Restricciones sobre los servicios o funciones ofrecidos por el sistema; es decir, no se refieren directamente a las funciones específicas del sistema, sino a propiedades de estas. Pueden ser temporales, de fiabilidad, de robustez, de capacidad, de ajuste a estándares, etc.; además, deben expresarse de forma cuantitativa. \textit{Ejemplo: La duración de la sesión ha de ser superior a 30 minutos}.
+    \item \textbf{Requisitos no funcionales}: Restricciones sobre los servicios o funciones ofrecidos por el sistema; es decir, no se refieren directamente a las funciones específicas del sistema, sino a propiedades de estas. Pueden ser temporales, de fiabilidad, de robustez, de capacidad, de ajuste a estándares, etc.; además, deben expresarse \uline{de forma cuantitativa}. \textit{Por ejemplo: la duración de la sesión ha de ser superior a 30 minutos}.
     
     Con frecuencia hacen referencia al sistema como un todo, por lo que los fallos en ellos lo inutilizan.
 
-    \item \textbf{Requisitos del dominio}: Provienen del entorno en el que se realiza la aplicación, reflejando por lo tanto las características de este, y pueden ser funcionales o no funcionales. Dada esta naturaleza, presentan la dificultad de que sean expresados en un lenguage específico de la aplicación en donde el analista no comprenda todos los detalles. \textit{Ejemplo: usar el formato DICOM en medicina es a la vez un requisito no funcional y de entorno}.
+    \item \textbf{Requisitos del dominio}: Provienen del entorno en el que se realiza la aplicación, reflejando por lo tanto las características de este, y pueden ser funcionales o no funcionales. Dada esta naturaleza, presentan la dificultad de que sean expresados en un lenguage específico de la aplicación en donde el analista no comprenda todos los detalles. \textit{Por ejemplo: usar el formato DICOM en medicina es a la vez un requisito no funcional y de entorno}.
     
     Es importante respetarlos dado que es imposible que el sistema trabaje satisfactoriamente si se incumplen.
 \end{itemize}
@@ -85,7 +85,7 @@ Aparecen a raíz de uno de los problemas más comunes: cómo poner en contacto a
 
 \begin{enumerate} % No añado definiciones de términos ya vistos en IPO
     \item \textbf{Entrevistas}.
-    \item \textbf{Desarrollo conjunto de aplicaciones} (JAD): Se crean equipos de usuarios y analistas que determinan conjuntamente las características que debe tener el software; el involucrar al usuario implica una mayor probabilida de éxito. \textit{Por ejemplo, TFEA}.
+    \item \textbf{Desarrollo conjunto de aplicaciones} (JAD): Se crean equipos de usuarios y analistas que determinan conjuntamente las características que debe tener el software; el involucrar al usuario implica una mayor probabilida de éxito. \textit{Por ejemplo: TFEA}.
     \item \textbf{Prototipado}.
     \item \textbf{Observación}: \textit{In situ}.
     \item \textbf{Estudio de documentación}.
@@ -175,7 +175,7 @@ Para distinguir entre cada una de las alternativas, pueden emplearse técnicas c
 
 \subsection{Evaluación de la viabilidad del sistema}
 
-Dado que los recursos siempre son limitados, \textbf{debe determinarse la viabilidad del proyecto lo antes posible}, para no invertir recursos y tiempo en el desarrollo de proyectos que resulten inviables finalmente. Para ello, el sistema debería poder implantarse con las restricciones de coste y tiempo con las tecnologías actuales, y con un alcance que le resulta útil al usuario.\\
+Dado que los recursos siempre son limitados, \textbf{debe determinarse la viabilidad del proyecto lo antes posible}, para no invertir recursos y tiempo en el desarrollo de proyectos que resulten inviables finalmente. Para ello, el sistema debería poder implantarse con las restricciones de coste y tiempo con las tecnologías actuales, y con un alcance que le resulte útil al usuario.\\
 
 \textbf{Nota:} \textit{El estudio de viabilidad está muy relacionado con el análisis de riesgos}.
 
@@ -211,14 +211,14 @@ El sistema debe \textbf{ser modelado} como un conjunto de componentes y relacion
 Si la complejidad del sistema lo requiere, puede formarse una jerarquía de niveles en la que el nivel superior se represente el sistema mediante un \uline{diagrama de contexto} (es el diagrama de arquitectura), y se irá detallando en sucesivos \uline{diagramas de flujo} (especifican el flujo de información en los subsistemas).
 
 \begin{itemize}
-    \item \textbf{Diagrama de contexto}: Representa el sistema en relación con su entorno, definiendo sus límites, y mostrando todos los productores y consumidores de información. Para ello, el sistema se encuentra en el centro del diagrama mientras que, a su alrededor, se sitúan las entidades o agentes externos, en sus correspondientes regiones, con los que se el sistema se relaciona mediante flujos de información.
+    \item \textbf{Diagrama de contexto}: Representa el sistema en relación con su entorno, definiendo sus límites, y mostrando todos los productores y consumidores de información. Para ello, el sistema se encuentra en el centro del diagrama mientras que, a su alrededor, se sitúan las entidades o agentes externos, en sus correspondientes regiones, con los que el sistema se relaciona mediante flujos de información.
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.5\linewidth]{Resources/contextdiagram}
             \caption{Ejemplo de diagrama de contexto.}
             \label{fig:diagramaDeContexto}
         \end{figure}
-    \item \textbf{Diagrama de flujo de arquitectura}: Determinan el flujo de entre los diferentes subsistemas a través de diagramas de flujo convencionales. Cada subsistema puede dar lugar a un diagrama de flujo, que pueden ser descompuestos a su vez en nuevos subsistemas, y ocupa una región del diagrama dependiendo de cuál sea su función (adquisición de datos, salida de datos, intefaz, etc.).
+    \item \textbf{Diagrama de flujo de arquitectura}: Determinan el flujo de entre los diferentes \uline{subsistemas} a través de diagramas de flujo convencionales. Cada subsistema puede dar lugar a un diagrama de flujo, que pueden ser descompuestos a su vez en nuevos subsistemas, y ocupa una región del diagrama dependiendo de cuál sea su función (adquisición de datos, salida de datos, intefaz, etc.).
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.8\linewidth]{Resources/Tema4/diagramaFlujo.png}
@@ -227,17 +227,18 @@ Si la complejidad del sistema lo requiere, puede formarse una jerarquía de nive
         \end{figure}
 \end{itemize}
 
-\textbf{Nota:} \textit{Debe mantenerse la \uline{consistencia} entre los diagramas de distinto nivel. Al expandir un determinado subsistema en un diagrama de flujo, los flujos de información que conectan dicho subsitema con otros o con agentes externos deben figurar también. Estos flujos tendrán un extremo libre, que será el que los conectaba con dichos elementos que quedan fuera del ámbito del nuevo diagrama de flujo.
-}
+\textbf{Nota:} \textit{Debe mantenerse la \uline{consistencia} entre los diagramas de distinto nivel. Al expandir un determinado subsistema en un diagrama de flujo, los flujos de información que conectan dicho subsitema con otros o con agentes externos deben figurar también. Estos flujos tendrán un extremo libre, que será el que los conectaba con dichos elementos que quedan fuera del ámbito del nuevo diagrama de flujo.}\\
+
+\textbf{Nota:} \textit{Un diagrama de flujo de arquitectura no es un DFD, a pesar de las similitudes que puedan presentar, ya que este último se encuentra destinado a uso exclusivo para software.}
 
 \section{Especificación del sistema}
 
-Es un documento que sirve de base para analizar más adelante cada uno de los componentes que intervienen en el sistema, sean hardware, software o personas. Para ello, se describe \textbf{la función, rendimiento y restricciones que debe cumplir el sistema, limitando e indicando también el papel e interfaz de cada uno de sus compoentes}.\\
+Es un documento que sirve de base para analizar más adelante cada uno de los componentes que intervienen en el sistema, sean hardware, software o personas. Para ello, se describe \textbf{la función, rendimiento y restricciones que debe cumplir el sistema, limitando e indicando también el papel e interfaz de cada uno de sus componentes}.\\
 
-Este documento debería permitir al cliente comprobar si en análisis del ingeniero del sistema satisface sus necesidades, por lo que debe ser revisado de forma conjunta para comprobar si:
+Este documento debería permitir al cliente comprobar si el análisis del ingeniero del sistema satisface sus necesidades, por lo que debe ser revisado de forma conjunta para comprobar si:
 
 \begin{itemize}
-    \item Se ha delimitado corectamente el ámbito del proyecto.
+    \item Se ha delimitado correctamente el ámbito del proyecto.
     \item Se han definido correctamente la funcionalidad, las interfaces y el rendimiento.
     \item Las necesidades del usuario y el análisis de riesgos justifican el desarrollo.
     \item El cliente y el analista tienen la misma percepción de los objetivos del proyecto.
@@ -260,7 +261,7 @@ Como resultado de la fase de análisis de requisitos del sistema, el componente 
 
 El análisis de requisitos del software tiene como objetivo \textbf{desarrollar una representación del software que pueda ser revisada y aprobada por el cliente}, y que sirva de enlace entre la asignación de funciones al software realizada, y el posterior diseño del software.\\
 
-Desde el punto de vista del analista de sistemas, esta fase \textbf{define con mayor precisión} las funciones y rendimiento del software, las interfaces con otros componentes y las restricciones que debe cumplir. Desde el punto de vista del diseñador, este análisis \uline{proporciona una representación} de la información, la función y el comportamiento del sistema que él se encargará de \uline{traducir en un diseño de datos y programas}. Además, el análisis de requisitos permite a todos, incluido el cliente, valorar la calidad del software una vez haya sido construido, o incluso antes de ello.\\
+Desde el punto de vista del analista de sistemas, esta fase \textbf{define con mayor precisión} las funciones y rendimiento del software, las interfaces con otros componentes y las restricciones que debe cumplir. Desde el punto de vista del diseñador, este análisis \textbf{proporciona una representación} de la información, la función y el comportamiento del sistema que él se encargará de \textbf{traducir en un diseño de datos y programas}. Además, el análisis de requisitos permite a todos, incluido el cliente, valorar la calidad del software una vez haya sido construido, o incluso antes de ello.\\
 
 \textbf{Nota:} \textit{El analista debe centrarse en el \textbf{qué}, no en el \textbf{cómo}}.\\
 
@@ -333,8 +334,8 @@ En cambio, \textit{Piattini} propone una serie de características que debe cump
     \item \textbf{Consistente}: Si, y solo si, ningún conjunto de requisitos descritos en ella son contradictorios, total o parcialmente. Se pueden presentar tres tipos distintos de conflictos:
         \begin{itemize}
             \item Se define el mismo objeto real pero con distintos términos para designarlo.
-            \item Las caracerísticas especificadas para objetos reales están en conflicto; \textit{por ejemplo, luces azules vs. luces verdes}.
-            \item Hay un conflicto lógico o temporal entre dos acciones; \textit{por ejemplo, sumar dos valores vs. multiplicarlos.}
+            \item Las caracerísticas especificadas para objetos reales están en conflicto; \textit{por ejemplo: luces azules vs. luces verdes}.
+            \item Hay un conflicto lógico o temporal entre dos acciones; \textit{por ejemplo: sumar dos valores vs. multiplicarlos.}
         \end{itemize}
     \item \textbf{Fácil de modificar}: Estar apropiadamente organizada, y no contener redundancia.
     
@@ -361,7 +362,7 @@ Presenta una relativa similitud con el análisis, ya que implica encontrar probl
 Durante el proceso de validación, deben llevarse a cabo diferentes tipos de comprobaciones sobre los requisitos:
 
 \begin{enumerate}
-    \item \textbf{Comprobación de validez}. Dado que cada sistema tendrá sus propias necesidades, ¿la especificación responde a todas las necesidades del proyecto? \textit{Por ejemplo, es posible que se identifique una necesidad de contar con determinadas funciones adicionales a medida que los analistas comprenden mejor el sistema que el cliente desea.}
+    \item \textbf{Comprobación de validez}. Dado que cada sistema tendrá sus propias necesidades, ¿la especificación responde a todas las necesidades del proyecto? \textit{Por ejemplo: es posible que se identifique una necesidad de contar con determinadas funciones adicionales a medida que los analistas comprenden mejor el sistema que el cliente desea.}
     \item \textbf{Comprobación de consistencia}: Los requisitos en el documento no deben contradecirse.
     \item \textbf{Comprobación de totalidad}: Se deben incluir requisitos que definan todas las funciones y restricciones propuestas para el sistema.
     \item \textbf{Comprobación de realismo}: Asegurar que los requisitos puedan implementarse actualmente, y teniendo en cuenta además restricciones de presupuesto y calendarización.
@@ -390,7 +391,7 @@ Dos consideraciones a tener en cuenta en este proceso son:
 
 \begin{itemize}
     \item Especificar los requisitos de la forma más completa posible, a pesar de que se prevean de forma inevitable revisiones en él.
-    \item Debe iniciarse un proceso de gestión formal del cambio, para identificar, controlar, seguir e informar de posibles cambios tan pronto como sean identificados. De este modo, se podrá contar con un rastro preciso de las modificaciones de la ERS, así como discernir entre los fragmentos actuales de la ERS y sus anteriores versiones.
+    \item Debe iniciarse un proceso de gestión formal del cambio, para identificar, controlar, seguir e informar de posibles cambios tan pronto como sean identificados. De este modo, se podrá contar con un rastreo preciso de las modificaciones de la ERS, así como discernir entre los fragmentos actuales de la ERS y sus anteriores versiones.
 \end{itemize}
 
 Como se puede ver, la administración de requisitos es el proceso de comprender y controlar los cambios en los requisitos del sistema. Consta de \textbf{dos etapas}: la planificación debería comenzar al mismo tiempo que la obtención de requisitos inicial, y la administración activa debe comenzar tan pronto como esté lista la primera versión del documento de requisitos.
@@ -400,8 +401,8 @@ Como se puede ver, la administración de requisitos es el proceso de comprender 
 Desde una perspectiva evolutiva, los requisitos son de una de las siguientes dos clases:
 
 \begin{itemize}
-    \item \textbf{Requisitos duraderos}: Relativamente estables dado que derivan de la actividad de la organización y, por lo tanto, están relacionados directamente con el dominio del sistema. \textit{Por ejemplo, en un hospital siempre habrá pacientes, doctores\ldots}
-    \item \textbf{Requisitos volátiles}: Probablemente cambiarán durante el desarrollo del sistema o después de que se haya puesto en operación. \textit{Por ejemplo, por cambios en las políticas gubernamentales de salud}.
+    \item \textbf{Requisitos duraderos}: Relativamente estables dado que derivan de la actividad de la organización y, por lo tanto, están relacionados directamente con el dominio del sistema. \textit{Por ejemplo: en un hospital siempre habrá pacientes, doctores\ldots}
+    \item \textbf{Requisitos volátiles}: Probablemente cambiarán durante el desarrollo del sistema o después de que se haya puesto en operación. \textit{Por ejemplo: por cambios en las políticas gubernamentales de salud}.
     
     \textit{Sommerville} clasifica estos últimos en:
     \begin{itemize}

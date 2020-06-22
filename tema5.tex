@@ -51,20 +51,20 @@ Como consecuencia, fueron surgiendo nuevos métodos de análisis con los que obt
 %Lo siento mucho almuiña pero aquí es probable que pregunte por siglas
 \section{Técnicas de especificación y modelado}
 
-El análisis estructurado \textbf{propone la descripción de los sistemas según 3 puntos de vista} (como si fuesen tres dimensiones del espacio):
+El análisis estructurado \textbf{propone la descripción de los sistemas según tres puntos de vista} (como si fuesen tres dimensiones del espacio):
 
 \begin{enumerate}
-    \item \textbf{Punto de vista de los datos (dimensión de la información)}: Se centra en la información que utiliza el sistema, representando el modelo de los datos usados, así como las relaciones entre ellos.
+    \item \textbf{Punto de vista de los datos (dimensión de la información)}: Se centra en la información que utiliza el sistema, representando el modelo de los datos usados, así como las relaciones entre ellos. Algunos ejemplos son:
           \begin{itemize}
               \item \textbf{D}iagramas \textbf{E}ntidad--\textbf{R}elación (\textbf{DER}).
               \item \textbf{D}iagramas \textbf{E}structura de \textbf{D}atos (\textbf{DED}).
           \end{itemize}
-    \item \textbf{Punto de vista del proceso (dimensión de la función)}: Se centra en qué hace el sistema, describiendo el conjunto de operaciones que reciben flujos de datos de entrada, y los transforman en flujos de datos de salida.
+    \item \textbf{Punto de vista del proceso (dimensión de la función)}: Se centra en qué hace el sistema, describiendo el conjunto de operaciones que reciben flujos de datos de entrada, y los transforman en flujos de datos de salida. Algunos ejemplos son:
           \begin{itemize}
               \item \textbf{D}iagramas de \textbf{F}lujo de \textbf{D}atos (\textbf{DFD}).
               \item \textbf{Especificaciones de Procesos} (\textbf{PSPECs}): Término genérico que engloba la definición de cómo un sistema transforma unas entradas en salidas mediante pseudocódigo, lenguaje natural, diagramas de flujo\ldots
           \end{itemize}
-    \item \textbf{Punto de vista del comportamiento (dimensión del tiempo)}: Se centra en cuándo sucede algo en el sistema, modelando el sistema como una sucesión de estados o modos de funcionamiento, así como se indica cuáles son las condiciones o eventos que hacen que el sistema pase de un modo a otro.
+    \item \textbf{Punto de vista del comportamiento (dimensión del tiempo)}: Se centra en cuándo sucede algo en el sistema, modelando el sistema como una sucesión de estados o modos de funcionamiento, así como se indica cuáles son las condiciones o eventos que hacen que el sistema pase de un modo a otro. Algunos ejemplos son:
           \begin{itemize}
               \item \textbf{D}iagramas de \textbf{F}lujo de \textbf{C}ontrol (\textbf{DFC}).
               \item \textbf{Especificaciones de Control} (\textbf{CSPECs}).
@@ -158,7 +158,7 @@ Los DFD \textbf{NO} representan el \textbf{comportamiento del sistema}, ni el \t
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{Resources/Tema5/elementosDFD.jpg}
-    \caption{Notación utilizada para representar los elementos del DFD.}
+    \caption{Notación utilizada para representar los elementos de un DFD.}
     \label{fig:elementosDFD}
 \end{figure}
 \begin{enumerate}
@@ -168,14 +168,14 @@ Los DFD \textbf{NO} representan el \textbf{comportamiento del sistema}, ni el \t
         \item \textbf{Pérdida de información}: Todas las entradas del proceso tienen que emplearse para calcular alguna de sus salidas.
     \end{itemize}
 
-    \item \textbf{Entidades externas}: Representan elementos del sistema informático o de otros sistemas adyacentes (en todo caso, fuera del los límites del sistema software) que producen información que será transformada por el software, o consumen la resultante. Los flujos de datos que comunican el sistema con las entidades externas representan las interfaces del sistema. \textbf{Sólo aparecen en el diagrama de contexto}, y los flujos entre unidades externas no son objeto de estudio.
+    \item \textbf{Entidades externas}: Representan elementos del sistema informático o de otros sistemas adyacentes (en todo caso, fuera del los límites del sistema software) que producen información que será transformada por el software, o consumen la resultante. Los flujos de datos que comunican el sistema con las entidades externas representan las interfaces del sistema. \textbf{Sólo pueden aparecer en el diagrama de contexto}, y los flujos entre unidades externas no son objeto de estudio.
 
-    \item \textbf{Almacenes de datos}: Representan información almacenada que puede ser utilizada por el software; concretamente, permiten guardar de forma temporal información que será consumida, o bien por el mismo proceso que la creó, o bien por otro distinto; en la mayoría de los casos, utilizaremos almacenes de datos cuando los \uline{procesos intercambien información pero no estén sincronizados}. Se pueden representar múltiples veces para una mayor legibilidad, y no pueden existir comunicaciones entre almacenes.
+    \item \textbf{Almacenes de datos}: Representan información almacenada que puede ser utilizada por el software; concretamente, permiten guardar de forma temporal información que será consumida, o bien por el mismo proceso que la creó, o bien por otro distinto; en la mayoría de los casos, se utilizarán almacenes de datos cuando los \uline{procesos intercambien información pero no estén sincronizados}. Se pueden representar múltiples veces para una mayor legibilidad, y no pueden existir comunicaciones entre almacenes.
 
     \item \textbf{Flujos de datos}: Representan \uline{datos o colecciones de datos que fluyen a través del sistema}, conectando los procesos con otros procesos, con entidades externas o con almacenes de datos. Posiblemente, en los diagramas de nivel mayor existirán flujos de datos bidireccionales (\uline{par de diálogo}), o incluso varios flujos de datos agrupados en uno solo (\uline{flujos múltiples}), que serán refinados en sucesivos diagramas. Contienen información de las tres dimensiones, aunque normalmente sólo representan las dimensiones de Función e Información. Aún así cabe destacar que, según su \textbf{dimensión temporal}, los flujos pueden ser:
           \begin{enumerate}[a.]
               \item \textbf{Discretos} \textit{(flecha con una cabeza)}: Representan movimiento de datos en un instante determinado de tiempo.
-              \item \textbf{Continuos} \textit{(flecha con con dos cabezas)}: Implican una transmisión continua de información; \textit{por ejemplo, comprobar si un registro ha cambiado}.
+              \item \textbf{Continuos} \textit{(flecha con dos cabezas)}: Implican una transmisión continua de información; \textit{por ejemplo: comprobar si un registro ha cambiado}.
           \end{enumerate}
 \end{enumerate}
 
@@ -192,7 +192,7 @@ Cualquiera de los elementos de un DFD tiene que estar etiquetado con un nombre s
 
 \begin{itemize}
     \item Los procesos y entidades externas se etiquetan con la función que realizan.
-    \item Los flujos de datos se etiquetan con un nombre identificativo de la información, e incluso su estado. \textit{Por ejemplo, número de teléfono, número de teléfono correcto, número de teléfono incorrecto\ldots}
+    \item Los flujos de datos se etiquetan con un nombre identificativo de la información, e incluso su estado. \textit{Por ejemplo: número de teléfono, número de teléfono correcto, número de teléfono incorrecto\ldots}
     \item Los almacenes de datos se etiquetan con un nombre significativo de la información contenida, generalmente en plural.
 \end{itemize}
 
@@ -212,16 +212,16 @@ Los \textbf{DFD} permiten la representación del sistema en múltiples niveles d
           \begin{figure}[h!]
               \centering
               \includegraphics[width=0.7\linewidth]{Resources/Tema5/nivel0.png}
-              \caption{DFD de nivel 0 de un Traductor y Distribuidor de Comunicaciones (TDC).}
+              \caption{DFD de nivel 0 de un Traductor y Distribuidor de Comunicaciones (TDC). Nótese cómo se respetan las posiciones explicadas en el anterior tema para un diagrama del contexto; \textit{por ejemplo: NCRS se muestra tanto como productor como consumidor de información}.}
               \label{fig:dfdn0}
           \end{figure}
     \item \textbf{Nivel 1}: \textbf{Diagrama 0} o \textbf{de Sistema}.\\
-          Denominado así por \textit{descomponer el proceso 0} en sus funciones principales; es interesante que éstas sean \textit{independientes} y que procesen \textit{los mismos flujos} que el de nivel 0.
+          Denominado así por \uline{descomponer el proceso 0} en sus funciones principales; es interesante que estas sean \uline{independientes} y que procesen \uline{los mismos flujos} que el de nivel 0.
           %Imagen nivel 1
           \begin{figure}[h!]
               \centering
               \includegraphics[width=0.7\linewidth]{Resources/Tema5/nivel1_DFD.png}
-              \caption{DFD de nivel 1 del TDC. Nótense los flujos de control \textit{DEBUG\_CR1} y \textit{DEBUG\_CR2}, que denotan que procedían de un flujo compuesto situado en un diagrama antecesor.}
+              \caption{DFD de nivel 1 del TDC. Nótense los flujos de control \textit{DEBUG\_CR1} y \textit{DEBUG\_CR2}, que denotan que procedían de un flujo compuesto situado en un diagrama antecesor. Por otra parte, es habitual que el significado de las posiciones empiece a perderse tras el DFD de nivel 0, priorizando ahora el situar los elementos en donde sea más conveniente.}
               \label{fig:dfdn1}
           \end{figure}
     \item \textbf{Niveles 2...N--1}\\
@@ -230,7 +230,7 @@ Los \textbf{DFD} permiten la representación del sistema en múltiples niveles d
           \begin{figure}[h!]
               \centering
               \includegraphics[width=0.7\linewidth]{Resources/Tema5/nivel2_Proceso3_DFD.png}
-              \caption{DFD de nivel 2 del proceso $3$ del TDC.}
+              \caption{DFD de nivel 2 del proceso $3$ del TDC. Nótese cómo el flujo \textit{DEBUG\_CR2} se vuelve a decomponer incluso más.}
               \label{fig:dfdn2}
           \end{figure}
     \item \textbf{Nivel N}\\
@@ -246,17 +246,20 @@ En primer lugar, los procesos en el DFD tienen un \textbf{identificador numéric
 \begin{itemize}
     \item Nivel 0: Solo contiene un proceso, el \textbf{``0''}
     \item Nivel 1: Se le asigna a cada proceso un número secuencialmente, \textbf{\{1, 2, 3\ldots\}}
-    \item Niveles 2...N: La numeración de los procesos en el DFD hijo se deriva del número del DFD padre; \textit{por ejemplo, para el proceso 3, serían 3.1, 3.2\ldots}
+    \item Niveles 2...N: La numeración de los procesos en el DFD hijo se deriva del número del DFD padre; \textit{por ejemplo: para el proceso 3, serían 3.1, 3.2\ldots}
 \end{itemize}
 
 Por otra parte:
 
 \begin{itemize}
 \item El título del DFD hijo debe ser el nombre del proceso que desarrolla.
-\item Debe mantenerse la \textbf{consistencia de los flujos de datos entre los DFDs} padre e hijo. En el diagrama hijo, estos flujos tendrán un extremo libre, puesto que conectaban el proceso padre con algún elemento que ya no va a estar representado; una excepción son los flujos que conectan los procesos con los almacenes de datos.
-\end{itemize}
 
-De todos modos, esta regla del balanceo puede contener excepciones. Un ejemplo de ello lo son los flujos de datos bidireccionales y los compuestos, dado que cada uno de estos deberá descomponerse en algún momento en varios flujos.
+\item Debe mantenerse la \textbf{consistencia de los flujos de datos entre los DFDs} padre e hijo.
+\begin{itemize}
+    \item En el diagrama hijo, estos flujos tendrán un extremo libre, puesto que conectaban el proceso padre con algún elemento que ya no va a estar representado. De todos modos, esto no sucede con los flujos que conectan los procesos con los almacenes de datos, en dónde estos últimos sí son representados.
+    \item Además, esta regla del balanceo contempla otras excepciones. Un ejemplo de ello lo son los flujos de datos bidireccionales y los compuestos, dado que cada uno de estos deberá descomponerse en algún momento en varios flujos, rompiendo la correspondencia 1 a 1 entre flujos padre e hijo.
+\end{itemize}
+\end{itemize}
 
 \subsection{Especificaciones de proceso (PSPEC)}
 
@@ -274,7 +277,7 @@ Las descripciones de estos procesos deben:
 Y, para su elaboración, se utilizan diferentes \uline{técnicas de especificación}:
 
 \begin{enumerate}
-    \item Lenguaje natural; \textit{por ejemplo, mediante una definición como ``invertir una matriz''}.
+    \item Lenguaje natural; \textit{por ejemplo: mediante una definición como ``invertir una matriz''}.
     \item Diagramas de flujo.
     \item Lenguaje estructurado, y diagramas de acción (pseudocódigo, especificar un algoritmo). 
     \item Árboles de decisión.
@@ -321,7 +324,7 @@ Y, para su elaboración, se utilizan diferentes \uline{técnicas de especificaci
 
 \subsection{Diagramas de flujo de control (DFC, Tiempo--Tiempo)}
 
-Dado que en los DFDs no se representa explícitamente el control o flujo de sucesos del sistema (\uline{cuándo se realizan los procesos o en qué orden}), hay determinados sistemas de software en donde se podrá intuir, pero habrá otros en que \uline{no será posible}. A la hora de \textbf{interpretar el comportamiento de un sistema}, podemos encontrarnos con \textbf{tres situaciones posibles}:
+Dado que en los DFDs no se representa explícitamente el control o flujo de sucesos del sistema (\uline{cuándo se realizan los procesos o en qué orden}), hay determinados sistemas de software en donde se podrá intuir, pero habrá otros en que \uline{no será posible}. A la hora de \textbf{interpretar el comportamiento de un sistema}, se pueden encontrar \textbf{tres situaciones posibles}:
 
 \begin{itemize}
     \item \textbf{Los procesos que figuran en el DFD están activos siempre}. Por ende, no es necesario especificar el control del sistema.
@@ -448,7 +451,7 @@ Estas CSPECs pueden caracterizarse mediante:
     \item Construir una jerarquía de DFCs paralela a la de DFDs.
     \item Cada par DFC/DFD representa los mismos procesos y las mismas entidades externas.
     \item Solo se introducen las señales de control que no estén implícitas en el DFD.
-    \item Cada DFC se desarrolla en un CSPEC.
+    \item Cada DFC se desarrolla en un CSPEC, siempre y cuando se considere necesario.
 \end{enumerate}
 
 \begin{figure}[H]
@@ -543,7 +546,7 @@ Las técnicas matriciales se utilizan \textbf{principalmente para ayudar a verif
 
 \section{Metodología del análisis estructurado}
 
-Una vez vistas todas las anteriores notaciones, se verá ahora cómo coordinarlas durante el trabajo.
+Una vez vistas todas las anteriores notaciones, se detallará ahora cómo coordinarlas durante el trabajo.
 
 \subsection{Fases}
 
@@ -554,9 +557,9 @@ El punto de partida será la creación del modelo de procesos del sistema, model
 Inicialmente, debe \textbf{revisarse toda la documentación inicial}; es importante pensar antes de ponerse a dibujar diagramas. Por ejemplo, puede realizarse un \textbf{análisis gramatical} de toda esta información, para facilitar la identificación de muchos de los componentes del sistema:
 
 \begin{itemize}
-    \item Las entidades externas se corresponderían con los nombres.
-    \item Los flujos y almacenes de datos también se corresponderían con los nombres.
-    \item Los procesos se corresponderían con los verbos.
+    \item Las \uline{entidades externas} se corresponderían con los \uline{nombres}.
+    \item Los \uline{flujos y almacenes de datos} también se corresponderían con los \uline{nombres}.
+    \item Los \uline{procesos} se corresponderían con los \uline{verbos}.
 \end{itemize}
 
 Además, la especificación (documentación) estudiada también establecerá las relaciones entre dichos nombres y verbos de por sí. A pesar de que lo obtenido hasta el momento no sea completamente correcto, o esté incompleto, sí marca un buen punto de partida.\\
@@ -569,7 +572,7 @@ El proceso de descomposición finalizará una vez de \textbf{encuentren los proc
 
 \textbf{No todos los sistemas requieren modelos de control}, al poder estar esta información presente, a veces, de forma implícita en los DFDs. En caso de realizarse, hay que tener \textbf{especial cuidado en no caer en detalles de implementación}.\\
 
-Esta actividad debe comenzar por \textbf{establecer una jerarquía de DFCs simétrica a la de DFDs}, de modo que cada par DFD/DFC contiene los mismos procesos, almacenes de datos, y entidades externas, y hasta en la misma posición, para facilitar la identificaciónde estos elementos. A continuación, se \textbf{eliminan del DFD todos los flujos que transporten información de control}, y se representarán en los DFCs.\\
+Esta actividad debe comenzar por \textbf{establecer una jerarquía de DFCs simétrica a la de DFDs}, de modo que cada par DFD/DFC contiene los mismos procesos, almacenes de datos, y entidades externas, y hasta en la misma posición, para facilitar la identificación de estos elementos. A continuación, se \textbf{eliminan del DFD todos los flujos que transporten información de control}, y se representarán en los DFCs.\\
 
 A \textbf{cada par DFD/DFC} en donde el DFD es antecesor inmediato de procesos primitivos, \textbf{le podrá corresponder una CSPEC}; esta puede ser combinacional, secuencial o compuesta, y se escogerá siempre el modelo más sencillo posible. Es importante recordar que debe \textbf{mantenerse la consistencia de flujos entre las ventanas de control y las CSPECs}.
 
@@ -593,7 +596,7 @@ Este modelo es el \textbf{resultado de la fase de análisis de requisitos del si
 \begin{itemize}
     \item \textbf{Secuenciar los procesos del DFD}: Deben ser lo más concurrentes posibles, en lugar de pensar que el sistema realiza las tareas una detrás de otra. El único secuenciamiento que debe aparecer en los DFDs es por la dependencia de datos; cualquier otra secuencia es puramente arbitraria, y dependerá fundamentalmente de necesidades de implementación.
     \item \textbf{Utilizar ficheros temporales o de backup}: Estos se usan para conectar procesos que no pueden ejecutarse simultáneamente por limitaciones de la capacidad del hardware, y no porque deban ejecutarse de forma secuencial. Pero, en este modelo esencial, estamos suponiendo que contamos con una tecnología perfecta con la que evitar este tipo de limitaciones, por lo que no se requiere esta clase de ficheros.
-    \item \textbf{Utilizar información redundante o que puede ser derivada}: En el modelo esencial no se usará nunca este tipo de información, ya que tiene más que ver con la eficiencia de implementación que con los requisitos del modelo. \textit{Por ejemplo, un error sería almacenar en una base de datos un dato que podría declararse como derivado, solo por evitar calcularlo cada vez que se requiera}.
+    \item \textbf{Utilizar información redundante o que puede ser derivada}: En el modelo esencial no se usará nunca este tipo de información, ya que tiene más que ver con la eficiencia de implementación que con los requisitos del modelo. \textit{Por ejemplo: un error sería almacenar en una base de datos un dato que podría declararse como derivado, solo por evitar calcularlo cada vez que se requiera}.
 \end{itemize}
 
 A partir del modelo esencial, los diseñadores podrán decidir cómo implementar el sistema, usando la \uline{tecnología disponible}.

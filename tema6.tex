@@ -23,7 +23,7 @@ Como se puede ver, el contar con la posibilidad de enfocar las pruebas hacia cua
 
 El \textit{IEEE} propone, entre otras, las siguientes definiciones en relación a las pruebas.
 
-\paragraph{Pruebas} Actividad en la que un sistema o uno de sus componentes se ejecuta en circunstancias previamente especificadas, y cuyos resultados son observados, registrados y evaluados comprobando algún aspecto determinado de antemano. \textit{Proceso de ejecutar un programa con el fin de encontrar errores.}\\
+\paragraph{Prueba} Actividad en la que un sistema o uno de sus componentes se ejecuta en circunstancias previamente especificadas, y cuyos resultados son observados, registrados y evaluados comprobando algún aspecto determinado de antemano. \textit{Procedimiento de ejecutar un programa con el fin de encontrar errores.}\\
 
 Una prueba consta de uno o más casos de prueba.
 
@@ -44,7 +44,7 @@ Por extensión, un caso de prueba válido debe comprobar que se deja hacer lo qu
     \item Diferencia entre un valor calculado, observado o medido, y el valor verdadero, especificado o teóricamente correcto.
     \item Resultado incorrecto.
     \item Defecto en el software.
-    \item Acción humana que conduce a un resultado incorrecto.
+    \item \uline{Acción humana que conduce a un resultado incorrecto}.
 \end{itemize}
 
 \begin{figure}[H]
@@ -57,15 +57,15 @@ Por extensión, un caso de prueba válido debe comprobar que se deja hacer lo qu
 
 \section{Filosofía de las pruebas del software}
 
-Las características especiales del software, como que carezca de leyes que rijan su comportamiento, o presentar una gran complejidad habitualmente, hacen aún más difícil la tarea de probarlo, de modo que la \textbf{prueba exhaustiva del software es impracticable}: \textbf{no} se pueden probar todas las posibilidades incluso en programas pequeños y sencillos. Además, esta situación se ve empeorada por la presencia de prejuicios (estimaciones subjetivas por parte de los trabajadores sobre lo bien que han realizado su trabajo), y por la habitual falta de tiempo en el desarollo del proyecto. Por ello, es interesante estudiar cuál es la mejor actitud a seguir en esta actividad; en general, será interesante \uline{sistematizar todo lo posible} de las pruebas, para ahorrar en tiempo y recursos.\\
+Las características especiales del software, como que carezca de leyes que rijan su comportamiento, o presentar una gran complejidad habitualmente, hacen aún más difícil la tarea de probarlo, de modo que la \textbf{prueba exhaustiva del software es impracticable}: \uline{\textbf{no} se pueden probar todas las posibilidades incluso en programas pequeños y sencillos}. Además, esta situación se ve empeorada por la presencia de prejuicios (estimaciones subjetivas por parte de los trabajadores sobre lo bien que han realizado su trabajo), y por la habitual falta de tiempo en el desarollo del proyecto. Por ello, es interesante estudiar cuál es la mejor actitud a seguir en esta actividad; en general, será interesante \uline{sistematizar todo lo posible} de las pruebas, para ahorrar en tiempo y recursos.\\
 
 Es necesario, en primer lugar, un fuerte cambio de mentalidad, dejando atrás la visión constructiva del desarrollo del software, para dar paso a la \uline{visión destructiva} de intentar tirar abajo lo construido. Al final el objetivo de las pruebas, desde el punto de vista del proyecto, es la detección de defectos en el software, por lo que \textbf{el descubrir un defecto debe considerarse como el éxito de una prueba}.\\
 
 En segundo lugar, también es necesario tener presente que todo el mundo comete errores, por lo que no hay que sentirse culpable por haber encontrado una metedura de pata; desde luego, es mejor que el desarrollador se encuentre con un fallo, en lugar de que tenga que ser reportado por el cliente. Es más, los defectos no son siempre el resultado de la negligencia, sino que influyen múltiples factores en su aparición, como la mala comunicación entre los miembros del equipo, que pueden dar lugar a malentendidos.\\
 
-Además del objetivo mencionado anteriormente, también cabe destacar que el objetivo de las pruebas, pero ahora desde el punto de vista de ser un proceso, es el \textbf{diseñar técnicas que permitan un desarollo sistemático de pruebas} para garantizar ese primer objetivo; es en esta visión en la que se centrará el documento.\\
+Además del objetivo mencionado anteriormente, también cabe destacar que el objetivo de las pruebas, pero ahora desde el punto de vista de ser un proceso, es el \textbf{diseñar técnicas que permitan un desarollo sistemático de pruebas} para garantizar ese primer objetivo; es en esta visión en la que se centrará este documento.\\
 
-Finalmente, la realización de pruebas en el software también cuenta con determinadas ventajas secundiarias:
+Finalmente, la realización de pruebas en el software también cuenta con determinadas ventajas secundarias:
 
 \begin{itemize}
     \item \textbf{Demuestran hasta qué punto se verifican los requisitos:} No siempre va a ser posible satisfacer todos; por ejemplo, es posible que queden en ``segundo plano'' los requisitos estimulantes (quedarían bien), o incluso podrían verse afectados requisitos más relevantes por limitaciones de tiempo y de recursos, agravados aún más en el caso de que se produzcan cambios en los requisitos durante el desarrollo del proyecto.
@@ -84,13 +84,13 @@ Los seis primeros fueron enunciados por \textit{Davis}, y los restantes por \tex
     \item \textbf{A todas las pruebas se les debería poder hacer un seguimiento hasta los requisitos del cliente}. Se logra mediante la \uline{trazabilidad}:
     \begin{itemize}
         \item \textbf{Trazabilidad hacia arriba}: Si se detecta un fallo, es posible identificar a qué requisitos afecta para evaluar si compensa o no solventarlo.
-        \item \textbf{Trazabilidad hacia abajo}: Si se produce un cambio en un requisito, qué pruebas es necesario cambiar para poder validar este nuevo requisito.
+        \item \textbf{Trazabilidad hacia abajo}: Si se produce un cambio en un requisito, es posible determinar qué pruebas es necesario cambiar para poder validar este nuevo requisito.
     \end{itemize}
     \item \textbf{Las pruebas deberían planificarse mucho antes de que empiecen, y ser repetibles} (probar $\rightarrow$ corregir, probar $\rightarrow$ corregir\ldots): La planificación de pruebas puede comenzar tan pronto como esté completo el modelo de requisitos. La definición detallada de los casos de prueba puede empezar tan pronto como el modelo de diseño se haya consolidado. Como se puede ver, es posible planificar y diseñar algunas pruebas incluso antes de generar ningún código.
     \item \textbf{El 80\% de los errores surgen al hacer el seguimiento del 20\% de los módulos del software (\textit{Principio de Pareto})}: Conviene aislar los módulos sospechosos.
     \item \textbf{Las pruebas tendrían que hacerse de lo pequeño hacia lo grande}: En caso contrario, será difícil concretar el origen de los problemas.
     \item \textbf{No son posibles pruebas exhaustivas, ni probar todo al mismo tiempo}: Sin embargo, es posible cubrir adecuadamente la lógica del programa y asegurarse de que se han aplicado todas las condiciones en el diseño a nivel de componente.
-    \item \textbf{Las pruebas deberían ser realizadas por un equipo independiente del de desarrollo}: El haber sido el responsable de la construcción del software probablemente lleve a realizar pruebas menos rigurosas, así como es habitual que condiciones que se olvidaron al crear el programa vuelvan a ser obviadas al escribir casos de prueba. \textit{Por ejemplo, que se reciba un fichero vacío}.\\
+    \item \textbf{Las pruebas deberían ser realizadas por un equipo independiente del de desarrollo}: El haber sido el responsable de la construcción del software probablemente lleve a realizar pruebas menos rigurosas, así como es habitual que condiciones que se olvidaron al crear el programa vuelvan a ser obviadas al escribir casos de prueba. \textit{Por ejemplo: que se reciba un fichero vacío}.\\
     
 
     \item \textbf{Cada caso de prueba debe definir el resultado de salida esperado} y compararlo con el realmente obtenido.
@@ -101,7 +101,7 @@ Los seis primeros fueron enunciados por \textit{Davis}, y los restantes por \tex
               \item \textbf{No hace lo que debe hacer}.
               \item \textbf{Hace lo que no debe hacer}.
           \end{itemize}
-    \item \textbf{Se deben evitar los casos desechables}; es decir, los no documentados o diseñados sin cuidado: Como suele ser necesario probar una y otra vez el software, el no documentar o no guardar los casos significa repetir constantemente el diseño de casos de prueba. \textit{Por ejemplo, se incluirían aquí las pruebas tecleadas sobre la marcha.}
+    \item \textbf{Se deben evitar los casos desechables}; es decir, los no documentados o diseñados sin cuidado: Como suele ser necesario probar una y otra vez el software, el no documentar o no guardar los casos significa repetir constantemente el diseño de casos de prueba. \textit{Por ejemplo: se incluirían aquí las pruebas tecleadas sobre la marcha.}
     \item \textbf{No deben hacerse casos de prueba suponiendo que no hay defectos en los programas}: Dicho de otro modo, no deben dedicarse pocos recursos a las pruebas.
     \item \textbf{Las pruebas son una tarea tanto o más creativa que el desarrollo de software}: Dado que no existen técnicas rutinarias para concebirlas.
 \end{enumerate}
@@ -124,13 +124,13 @@ En la siguiente figura, se puede ver una representación del proceso completo re
 
 Como se comentó anteriormente, el diseño de casos de prueba está totalmente condicionado por la imposibilidad de probar exhaustivamente el software. Por ello, las técnicas de diseño de casos de prueba tienen como objetivo \textbf{conseguir una confianza aceptable en la que se detectarán los defectos existentes}, al no ser obtenible la seguridad total, \textbf{sin consumir una cantidad excesiva de recursos}. Alcanzar un equilibrio entre dicha confianza y el uso de recursos no es sencillo cuanto menos.\\
 
-La idea fundamental para el diseño de casos de prueba es \textbf{elegir algunos de ellos que, por sus características, se consideren representativas del resto}; de este modo, se asume que, si no se detectan defectos en el software al ejecutar dichos casos, se puede contar con un cierto nivel de confianza en que el programa no tiene defectos. Es necesario recurrir a ciertos criterios de elección para construir los mejores casos de prueba posibles, como preguntarse cómo puede fallar el software, escoger casos no redundantes, que no sean ni demasiado sencillos ni demasiado complejos\ldots\\
+La idea fundamental para el diseño de casos de prueba es \textbf{elegir algunos de ellos que, por sus características, se consideren representativos del resto}; de este modo, se asume que, si no se detectan defectos en el software al ejecutar dichos casos, se puede contar con un cierto nivel de confianza en que el programa no tiene defectos. Es necesario recurrir a ciertos criterios de elección para construir los mejores casos de prueba posibles, como preguntarse cómo puede fallar el software, escoger casos no redundantes, que no sean ni demasiado sencillos ni demasiado complejos\ldots\\
 
 Existen dos enfoques principales:
 
 \begin{enumerate}
-    \item \textbf{Estructural o de caja blanca} (verificación): Consiste en \uline{centrarse en la estructura interna (implementación)} del programa, realizando pruebas que aseguren que todos los módulos o componentes internos funcionan bien y encajan correctamente. \textit{La prueba exhaustiva consistiría en probar todos los posibles caminos de ejecución.}
-    \item \textbf{Funcional o de caja negra} (validación): Consiste en \uline{estudiar la especificación de las funciones (interfaz)}, dejando de importar cómo está implementada la aplicación. De esta especificación, se derivan los casos, probándose que cada función es completamente operativa puesto que se conoce qué es lo que debe realizar. \textit{La prueba exhaustiva consistiría en probar todas las posibles entradas y salidas del programa.}
+    \item \textbf{Estructural o de caja blanca} (verificación): Consiste en \uline{centrarse en la estructura interna (implementación)} del programa, realizando pruebas que aseguren que todos los módulos o \uline{componentes internos funcionan bien y encajan correctamente}. \textit{La prueba exhaustiva consistiría en probar todos los posibles caminos de ejecución.}
+    \item \textbf{Funcional o de caja negra} (validación): Consiste en \uline{estudiar la especificación de las funciones (interfaz)}, \uline{dejando de importar cómo está implementada la aplicación}. De esta especificación, se derivan los casos, probándose que cada función es completamente operativa puesto que se conoce qué es lo que debe realizar. \textit{La prueba exhaustiva consistiría en probar todas las posibles entradas y salidas del programa.}
 \end{enumerate}
 
 Cabe destacar que estos enfoques no son excluyentes, sino que \textbf{son complementarios}. Por ejemplo, podrían diseñarse inicialmente los casos de prueba de caja negra y, a la hora de diseñar los de caja blanca, cabría la posibilidad de que algunos casos de estos últimos ya estuviesen cubiertos; al final, es necesario que se recorran determinados caminos en la ejecución de las pruebas de caja negra.
@@ -143,7 +143,7 @@ Es interesante realizar pruebas de caja blanca porque:
 \begin{itemize}
     \item Los errores tipográficos son aleatorios, por lo que pueden aparecer en cualquier parte del programa, se ejecute regularmente o no.
     \item Se suele creer que un determinado flujo es poco probable cuando, de hecho, puede ejecutarse regularmente.
-    \item En relación al anterior punto, en general, la probabilidad e importancia de un trozo de código suelen ser calculadas de forma muy subjetiva. \textit{Por ejemplo, si el programador sabe que un camino normalmente se ejecutará poco, es probable que le preste menos atención que a otros, incrementándose por lo tanto la probabilidad de que se encuentren errores en él.}
+    \item En relación al anterior punto, en general, la probabilidad e importancia de un trozo de código suelen ser calculadas de forma muy subjetiva. \textit{Por ejemplo: si el programador sabe que un camino normalmente se ejecutará poco, es probable que le preste menos atención que a otros, incrementándose por lo tanto la probabilidad de que se encuentren errores en él.}
 \end{itemize}
 
 El diseño de casos de prueba tiene que basarse en la \textbf{elección de caminos importantes que ofrezcan una seguridad aceptable de descubrir un defecto}, y para ello se utilizan los criterios de cobertura lógica. No requieren el uso de representaciones gráficas, pero se suelen utilizar grafos de flujo (estrechamente relacionados con los diagramas de flujo de control), con el objetivo de \uline{convertir el código en un grafo y facilitar así la visualización de sus posibles caminos}.
@@ -158,7 +158,7 @@ El diseño de casos de prueba tiene que basarse en la \textbf{elección de camin
 
 \subsection{Criterios de cobertura lógica}
 
-A continuación, se dispone una posible clasificación de los criterios de cobertura lógica según \textit{Myers}. Se encuentran en orden de exigencia ascendente (confianza en haber detectado fallos) y, por ende, también en coste económico:
+A continuación, se dispone una posible clasificación de los criterios de cobertura lógica según \textit{Myers}. Se encuentran en orden de exigencia ascendente (confianza en haber detectado fallos) y, por ende, también en cuanto a coste económico:
 
 \begin{enumerate}
     \item \textbf{Cobertura de sentencias}: Cada sentencia o instrucción del programa se ejecuta al menos una vez. \textit{Por ejemplo: un bucle \texttt{while} solo se ejecutaría una vez.}
@@ -169,7 +169,7 @@ A continuación, se dispone una posible clasificación de los criterios de cober
 
     \item \textbf{Criterio de decisión/condición}: Se exige el criterio de cobertura de condiciones, obligando a que se cumpla también el criterio de cobertura de decisiones. El objetivo es complementarlos, pero buscando igualmente el mínimo número posible de casos de prueba.
 
-    \item \textbf{Criterio de condición múltiple}: Dado que la evaluación de las condiciones de una decisión no se realiza de forma simultánea, se descompone cada decisión múltiple en una secuencia de decisiones unicondicionales\footnote{Una decisión es un conjunto de condiciones. Por ejemplo,
+    \item \textbf{Criterio de condición múltiple}: Dado que la evaluación de las condiciones de una decisión no se realiza de forma simultánea, se descompone cada decisión múltiple en una secuencia de decisiones unicondicionales\footnote{Una decisión es un conjunto de condiciones. Por ejemplo:
               \texttt{a!=null \&\& a.leng>3} es una decisión que se descompone en las condiciones \texttt{a!=null} y \texttt{a.leng>3}.}, y se exige que todas las combinaciones posibles de resultados (verdadero/falso) de cada condición en cada decisión se ejecuten al menos una vez.
 
               Dicho de otro modo, se descompone una decisión múltiple en decisiones unicondicionales, y se asegura el cumplimiento del anterior criterio para cada una de estas.
@@ -202,7 +202,7 @@ La prueba de bucles es la \textbf{técnica de prueba de caja blanca que se centr
               \item Progresar hacia fuera, llevando a cabo pruebas para el siguiente bucle, pero manteniendo el resto de bucles externos en sus valores mínimos, y los demás bucles anidados en sus valores típicos (es decir, se fija un valor para estos).
               \item Continuar hasta haber probado todos los bucles.
           \end{itemize}
-    \item \textbf{Bucles concatenados}: Se pueden probar mediante el enfoque para bucles simples, siempre que cada bucle sea independiente del resto. Si son dependientes (por ejemplo, hay dos bucles concatenados y el segundo usa el controlador del primero como valor inicial), se usa la técnica para bucles anidados.
+    \item \textbf{Bucles concatenados}: Se pueden probar mediante el enfoque para bucles simples, siempre que cada bucle sea independiente del resto. Si son dependientes (\textit{por ejemplo: hay dos bucles concatenados y el segundo usa el controlador del primero como valor inicial}), se usa la técnica para bucles anidados.
     \item \textbf{Bucles no estructurados}: Deben ser rediseñados para que se ajusten a las construcciones de la programación estructurada.
 \end{enumerate}
 
@@ -218,9 +218,9 @@ La métrica de \textit{McCabe} es un \textbf{indicador del número de caminos in
 
 El propio \textit{McCabe} definió como un buen criterio de prueba la consecución de la ejecución de un conjunto de caminos independientes igual al indicado por la métrica; es más, la métrica de \textit{McCabe} coincide con el número máximo de caminos independientes que puede haber un grafo. Cabe destacar que \textbf{un camino es independiente de otros si incorpora un arco que los demás no incluyen}.\\
 
-Además, el conjunto de caminos que permite establecer asegura que todo el código se ejecuta, al menos una vez, por lo que cubriría la cobertura de sentencias. Este criterio también se ha propuesto como equivalente a la cobertura de decisiones, pero han surgido contraejemplos que lo invalidan.\\
+Además, el conjunto de caminos que permite establecer asegura que todo el código se ejecuta, al menos, una vez, por lo que cubriría la cobertura de sentencias. Este criterio también se ha propuesto como equivalente a la cobertura de decisiones, pero han surgido contraejemplos que lo invalidan.\\
 
-La complejidad de \textit{McCabe} $V (G)$ puede ser calculada de tres maneras distintas a partir de un grafo de flujo $G$:
+La complejidad de \textit{McCabe}, $V (G)$, puede ser calculada de tres maneras distintas a partir de un grafo de flujo $G$:
 \begin{enumerate}
     \item $V (G) = a-n+2$, siendo $a$ el número de arcos, y $n$ el de nodos.
     \item $V (G) = r$, siendo $r$ el número de regiones cerradas del grafo.
@@ -247,7 +247,7 @@ La complejidad de \textit{McCabe} $V (G)$ puede ser calculada de tres maneras di
     \item $V (G) = c+1 = 5+1 = 1$.
 \end{enumerate}
 
-\textbf{Nota:} \textit{Hay que tener presente, para el número de regiones, que la fórmula solo es aplicable a grafos fuertemente conexos (siempre existe un camino para cualesquiera dos nodos que se escojan). Esto no se verifica en los programas con un nodo de inicio y otro de final, por lo que, para calcular las regiones, o bien es necesario unir estos nodos, o bien debe contabilizarse la región externa.}\\
+\textbf{Nota:} \textit{Hay que tener presente, para el número de regiones, que la fórmula solo es aplicable a grafos fuertemente conexos (siempre existe un camino para cualesquiera dos nodos que se escojan). Esto no se verifica en los programas con un nodo de inicio y otro de fin, por lo que, para calcular las regiones, o bien es necesario unir estos nodos, o bien debe contabilizarse la región externa.}\\
 
 Una vez calculado del valor de $V (G)$, permitiendo afirmar por lo tanto el número máximo de caminos independientes del grafo $G$, para ayudar a la elección de los caminos de prueba, \textit{McCabe} propone el \textbf{método del camino básico} para la selección de los caminos independientes. Consiste en:
 
@@ -284,13 +284,13 @@ Existen dos enfoques a la hora de seleccionar casos de prueba de caja negra.
 El diseño de pruebas se apoyará en las siguientes dos definiciones de \textit{Myers} para buscar \uline{buenos casos de prueba} (presentan una alta probabilidad de detectar un nuevo error):
 
 \begin{itemize}
-    \item El caso ejecuta el máximo número de posibilidades de entrada diferentes para reducir así el total de casos adicionales necesarios.
-    \item Cada entrada cubre un conjunto extenso de otras: Además de dar información sobre la ausencia o presencia de defectos con las entradas probadas, estos resultados pueden ser generalizados con cierta seguridad para otro conjunto de entradas similares que no hayan sido probadas.
+    \item \textbf{El caso ejecuta el máximo número de posibilidades de entrada diferentes} para reducir así el total de casos adicionales necesarios.
+    \item \textbf{Cada entrada cubre un conjunto extenso de otras}. Además de dar información sobre la ausencia o presencia de defectos con las entradas probadas, estos resultados pueden ser generalizados con cierta seguridad para otro conjunto de entradas similares que no hayan sido probadas.
 \end{itemize}
 
 \subsubsection{Partición o clases de equivalencia}
 
-Esta técnica de diseño de casos se basa en \textbf{dividir el dominio de valores de entradas} en un número finito de clases, de modo que \textbf{la prueba de un valor representativo de una clase permite suponer}, razonablemente, que \textbf{el resultado obtenido será el mismo} que el obtenido probando cualquier otro valor de la clase.\\
+Esta técnica de diseño de casos se basa en \textbf{dividir el dominio de valores de entradas} en un número finito de clases, de modo que \textbf{la prueba de un valor representativo de una clase permite suponer}, razonablemente, que \textbf{el resultado obtenido será ``el mismo''} que el obtenido probando cualquier otro valor de la clase.\\
 
 Para ello, hay que realizar las siguientes tareas:
 
@@ -305,10 +305,10 @@ Para ello, hay que realizar las siguientes tareas:
         Existen algunas \uline{reglas} que ayudan a identificar clases:
 
         \begin{enumerate}[R1.]
-            \item Si se especifica un rango de valores, se creará una clase válida y dos clases no válidas. \textit{Por ejemplo, $5<n<7$.}
-            \item Si se especifica una lista de valores de tamaño variable, se creará una clase válida y dos no válidas. \textit{Por ejemplo, puede haber de 1 a 4 titulares para una cuenta bancaria.}
-            \item Si se especifica una situación del tipo \textit{debe ser} o booleana, se creará una clase válida y una no válida. \textit{Dos ejemplos serían que (1) el primer carácter debe ser una letra, o que (2) la edad debe introducirse en formato numérico.}
-            \item Si se especifica un conjunto de valores admitidos, que son tratados de forma distinta, se creará una clase válida por cada valor, y una clase no válida. \textit{Por ejemplo, pueden registrarse tres tipos de inmuebles, siendo chalets, pisos, o locales comerciales.}
+            \item Si se especifica un rango de valores, se creará una clase válida y dos clases no válidas. \textit{Por ejemplo: $5<n<7$.}
+            \item Si se especifica una lista de valores de tamaño variable, se creará una clase válida y dos no válidas. \textit{Por ejemplo: puede haber de 1 a 4 titulares para una cuenta bancaria.}
+            \item Si se especifica una situación del tipo \textit{debe ser} o booleana, se creará una clase válida y una no válida. \textit{Dos ejemplos serían: (1) que el primer carácter debe ser una letra, (2) o que la edad debe introducirse en formato numérico.}
+            \item Si se especifica un conjunto de valores admitidos, que son tratados de forma distinta, se creará una clase válida por cada valor, y una clase no válida. \textit{Por ejemplo: pueden registrarse tres tipos de inmuebles, siendo chalets, pisos, o locales comerciales.}
             \item En cualquier caso, si se sospecha que ciertos elementos de una clase no se tratan igual que el resto de la misma, deben dividirse en clases menores.
         \end{enumerate}
     \end{enumerate}
@@ -338,17 +338,18 @@ Realmente, esta técnica de diseño de casos complementa a la de particiones. La
 De nuevo, el proceso de selección es heurístico, como en la técnica de particiones, pero existen ciertas reglas orientativas:
 
 \begin{enumerate}[R1.]
-    \item Si una condición de entrada especifica un intervalo cerrado de valores (\textit{por ejemplo $[-1.0, 1.0]$}), se deben generar casos para los extremos del rango (\textit{$-1.0$ y $1.0$}), y casos no válidos para situaciones justo más allá de los extremos (\textit{$-1.001$ y $1.001$, en el caso de que se admitan tres decimales}).
-    \item Si la condición de entrada especifica un número de valores (por ejemplo, \textit{el fichero de entrada tendrá de 1 a 255 registros}), se diseñarán casos para (1) el valor máximo, (2) el valor mínimo, (3) uno más que el máximo, y (4) uno menos que el mínimo (\textit{en este caso, $0, 1, 255, 256$}).
-    \item Usar la regla R1 para la condición de salida. \textit{Por ejemplo, si el descuento máximo aplicable en una compra será el 50\%, y el mínimo será el 6\%, se escribirán casos para intentar obtener descuentos de 5.99\%, 6\%, 50\%, y 50.01\%}.
-    \item Usar la regla R2 para cada condición de salida. \textit{Por ejemplo, si el programa puede mostrar de 1 a 4 listados, se escribirán casos para intentar generar 0, 1, 4, y 5 listados.}\\
+    \item Si una condición de entrada especifica un intervalo cerrado de valores (\textit{por ejemplo: $[-1.0, 1.0]$}), se deben generar casos para los extremos del rango (\textit{$-1.0$ y $1.0$}), y casos no válidos para situaciones justo más allá de los extremos (\textit{$-1.001$ y $1.001$, en el caso de que se admitan tres decimales}).
+    \item Si la condición de entrada especifica un número de valores (por ejemplo: \textit{el fichero de entrada tendrá de 1 a 255 registros}), se diseñarán casos para (1) el valor máximo, (2) el valor mínimo, (3) uno más que el máximo, y (4) uno menos que el mínimo (\textit{en este caso, $0, 1, 255, 256$}).
+    \item Usar la regla R1 para la condición de salida. \textit{Por ejemplo: si el descuento máximo aplicable en una compra será el 50\%, y el mínimo será el 6\%, se escribirán casos para intentar obtener descuentos de 5.99\%, 6\%, 50\%, y 50.01\%}.
+    \item Usar la regla R2 para cada condición de salida. \textit{Por ejemplo: si el programa puede mostrar de 1 a 4 listados, se escribirán casos para intentar generar 0, 1, 4, y 5 listados.}\\
     En esta regla, como en la R3, debe recordarse que:
     \begin{itemize}
         \item Los valores límite de entrada no generan necesariamente los valores límite de salida.
         \item No siempre se pueden generar resultados fuera del rango de salida, pero la posibilidad debe ser considerada igualmente.
-        \item Si la entrada o salida de un programa es un conjunto ordenado, los casos deben concentrarse en el primer y último elemento. \textit{Por ejemplo, una tabla, o un archivo secuencial.}
     \end{itemize}
 \end{enumerate}
+
+Además, como norma general, si la entrada o salida de un programa es un conjunto ordenado, los casos deben concentrarse en el primer y último elemento. \textit{Por ejemplo: una tabla, o un archivo secuencial.}
 
 \subsubsection{Conjetura de errores}
 
@@ -358,14 +359,14 @@ La idea básica de esta técnica consiste en \textbf{enumerar una lista de equiv
     \item El valor cero, tanto en la entrada como en la salida.
     \item En situaciones en las que se introduce un número variable de valores, conviene centrarse en los casos de (1) que no haya ningún valor, (2) que solo haya uno, y (3) que todos los valores sean iguales.
     \item Es recomendable imaginar que el desarrollador pudiera haber interpretado algo mal en la especificación.
-    \item También interesa imaginar lo que el usuario pueda introducir como entrada a un programa, previniendo toda clase de acciones, incluso como si el usuario fuese poco hábil, o que presentase malas intenciones.
+    \item También interesa imaginar lo que el usuario pueda introducir como entrada a un programa, previniendo toda clase de acciones, incluso como si el usuario fuese poco hábil, o que pudiese presentar malas intenciones.
 \end{itemize}
 
 \subsection{Enfoque aleatorio}
 
 Se basa en la generación de pruebas aleatorias, en las cuales \textbf{se simula la entrada habitual del programa creando los datos de entrada en la secuencia y frecuencia con las que podrían aparecer en la práctica}. Generalmente, el objetivo de estos llamados \uline{tests de esfuerzo} es el \textbf{evaluar el rendimiento del sistema}, puesto que, como las entradas son generadas aleatoriamente, no se pueden precedir las salidas. Esto es debido a que, si por el contrario contásemos con un software que predijese las salidas con total fiabilidad, este podría reemplazar directamente al software que está siendo probado.\\
 
-Para crear estos tests, es necesario contar con una herramienta generadora de pruebas, a la que se especifica la descripción de las entradas, las secuencias de entrada posibles, y las probabilidades de ocurrir en la práctica (por ejemplo, indicando una distribución estadística si la siguen). Si el proceso de generación se ha realizado correctamente, eventualmente se crearán todas las posibles entradas del programa, en todas las posibles combinaciones y permutaciones. 
+Para crear estos tests, es necesario contar con una herramienta generadora de pruebas, a la que se especifica la descripción de las entradas, las secuencias de entrada posibles, y las probabilidades de ocurrir en la práctica (\textit{por ejemplo: indicando una distribución estadística si la siguen}). Si el proceso de generación se ha realizado correctamente, eventualmente se crearán todas las posibles entradas del programa, en todas las posibles combinaciones y permutaciones. 
 
 \subsection{Métodos de prueba basados en grafos}
 
@@ -403,8 +404,8 @@ Una vez creado el grafo, se puede proceder a la creación de los casos de prueba
 A continuación, se describe un número de métodos de prueba de comportamiento que pueden hacer uso de los grafos:
 
 \begin{itemize}
-    \item \textbf{Modelado del flujo de transacción:} Los nodos representan los pasos de alguna transacción, y los enlaces son las conexiones lógicas entre ellos; sería posible partir de un DFD. \textit{Por ejemplo, los pasos requeridos para hacer una reserva en un hotel; son pasos del proceso, se use software o no.}
-    \item \textbf{Modelado de estados finitos:} Los nodos son estados del software observables por el usuario, y los enlaces representan las transiciones que ocurren para moverse de un estado a otro. \textit{Por ejemplo, el usuario puede interactuar con pantallas, sobre las cuales realizar acciones que lleven a otras pantallas.}
+    \item \textbf{Modelado del flujo de transacción:} Los nodos representan los pasos de alguna transacción, y los enlaces son las conexiones lógicas entre ellos; sería posible partir de un DFD. \textit{Por ejemplo: los pasos requeridos para hacer una reserva en un hotel; son pasos del proceso, se use software o no.}
+    \item \textbf{Modelado de estados finitos:} Los nodos son estados del software observables por el usuario, y los enlaces representan las transiciones que ocurren para moverse de un estado a otro. \textit{Por ejemplo: el usuario puede interactuar con pantallas, sobre las cuales realizar acciones que lleven a otras pantallas.}
     \item \textbf{Modelado del flujo de datos:} Los nodos son objetos de datos, y los enlaces son las transformaciones que sufren para pasar de ser un objeto a otro.
 \end{itemize}
 
@@ -413,12 +414,12 @@ Es importante tener presente que \textbf{todos son modelos de caja negra}, por l
 
 \section{Enfoque práctico recomendado para el diseño de casos}
 
-El enfoque remonendado para el uso de las técnicas de diseño de casos pretende mostrar el uso más apropiado de cada técnica para la obtención de un conjunto de casos útiles sin perjuicio de las estrategias de niveles de prueba.
+El enfoque recomendado para el uso de las técnicas de diseño de casos pretende mostrar el uso más apropiado de cada técnica para la obtención de un conjunto de casos útiles sin perjuicio de las estrategias de niveles de prueba.
 
 \begin{enumerate}
     \item \textbf{Si la especificación contiene combinaciones de condiciones de entrada, se comienza formando sus grafos causa--efecto} para comprenderlas con más facilidad.
     \item \textbf{Se identifican las clases válidas y no válidas de equivalencia para la entrada y la salida}.
-    \item En todos los casos, \textbf{se usa el análisis de valores límite (AVL) para añadir casos de prueba}: Elegir límites para dar valores a las causas en los casos generados, asumiendo que cada caso es una clase de equivalencia.
+    \item En todos los casos, \textbf{se usa el análisis de valores límite (AVL) para añadir casos de prueba}.
     \item \textbf{Se utiliza la conjetura de errores para añadir nuevos casos}, principalmente referidos a valores especiales.
     \item \textbf{Se ejecutan los casos generados hasta el momento (de caja negra), y se analiza la cobertura obtenida}.
     \item \textbf{Se examina la lógica del programa para añadir los casos precisos (de caja blanca) para cubrir el criterio de cobertura elegido}, siempre y cuando no haya sido satisfecho en el anterior punto.
@@ -464,9 +465,9 @@ Según el estándar \textbf{estándar IEEE 829}, se generará la siguiente docum
     \item \textbf{Especificación del caso de prueba}: A partir del anterior diseño, se definen con detalle cada uno de los casos de prueba mencionados, especificando datos de pruebas exactos, resultados esperados, y demás detalles, para obtener un conjunto de pruebas de validación y de verificación. En el estándar se fija la siguiente estructura:
     \begin{enumerate}
         \item Elementos software a probar, y cuáles de sus características serán ejercitadas por el caso.
-        \item Especificaciones de cada entrada requerida para ejecutar el caso. Deben detallarse además las relaciones entre estas; \textit{por ejemplo, la sincronización de las mismas.}
-        \item Especificaciones de todas las salidas y las características requeridas (\textit{por ejemplo, el tiempo de respuesta}).
-        \item Necesidades del entorno. \textit{Por ejemplo, en cuanto a hardware, software, o personal}.
+        \item Especificaciones de cada entrada requerida para ejecutar el caso. Deben detallarse además las relaciones entre estas; \textit{por ejemplo: la sincronización de las mismas.}
+        \item Especificaciones de todas las salidas y las características requeridas (\textit{por ejemplo: el tiempo de respuesta}).
+        \item Necesidades del entorno. \textit{Por ejemplo: en cuanto a hardware, software, o personal}.
         \item Requisitos o restricciones especiales de procedimiento.
         \item Dependencias entre casos.
     \end{enumerate}
@@ -480,7 +481,7 @@ Según el estándar \textbf{estándar IEEE 829}, se generará la siguiente docum
             \item La secuencia necesaria de acciones para preparar la ejecución.
             \item Acciones necesarias para empezar la ejecución.
             \item Acciones necesarias durante la ejecución.
-            \item Cómo se realizarán las medidas. \textit{Por ejemplo, del tiempo de respuesta.}
+            \item Cómo se realizarán las medidas. \textit{Por ejemplo: del tiempo de respuesta.}
             \item Cómo tratar incidencias y restaurar el entorno de ejecución.
         \end{itemize}
     \end{enumerate}
@@ -503,18 +504,21 @@ El proceso abarca las siguientes fases:
     \item \textbf{Proceso de ejecución}: Se ejecutan las pruebas, cuyos casos y procedimientos han sido ya diseñados previamente. Consta de las siguientes fases:
     \begin{enumerate}
         \item Se ejecutan las pruebas.
-        \item Se comprueba si ha habido algún fallo al ejecutar que impida terminar la ejecución de algún caso. \textit{Por ejemplo, se cae el sistema, se bloquea el teclado\ldots}
+        \item Se comprueba si ha habido algún fallo al ejecutar que impida terminar la ejecución de algún caso; dicho de otro modo, se comprueba si las pruebas no han podido terminar. \textit{Por ejemplo: se cae el sistema, se bloquea el teclado\ldots}
         \item Si lo ha habido, se puede deber a un defecto software, que llevará a la depuración o corrección del código, o a un defecto en el propio diseño de las pruebas. En ambos casos, \uline{las nuevas pruebas} (quizá cambien al corregir el software) o \uline{las corregidas deberán ejecutarse}.
         \item De no existir fallo, se pasará a la comprobación de la terminación de las pruebas.
     \end{enumerate}
 
     \item \textbf{Comprobación de la conclusión del proceso de prueba}: Se lleva a cabo según criterios de compleción de prueba que suelen ser especificados en el plan de pruebas. Consta de las siguientes fases:
     \begin{enumerate}
-        \item Tras la ejecución, se comprobará si se cumplen los criterios de compleción descritos en el correspondiente plan de pruebas. \textit{Por ejemplo, se terminan las pruebas cuando se han probado todos los procedimientos de operación, o se ha cumplido la cobertura lógica marcada.}
-        \item En caso de terminar las pruebas, se pasa a la evaluación de los productos probados sobre la base de los resultados obtenidos. \textit{Se alcanza una terminación normal.}
-        \item En caso de no terminar las pruebas, se debe comprobar la presencia de condiciones anormales en la prueba. Si hubiesen existido condiciones anormales (\textit{por ejemplo, no se han podido ejecutar todos los casos porque el sistema se cae regularmente}), se pasa de nuevo a la evaluación; \textit{se alcanza una terminación anormal}. En caso contrario, se pasa a generar y ejecutar pruebas adicionales para satisfacer cualquiera de las dos terminaciones.
+        \item Tras la ejecución, se comprobará si se cumplen los criterios de compleción descritos en el correspondiente plan de pruebas. \textit{Por ejemplo: se terminan las pruebas cuando se han probado todos los procedimientos de operación, o se ha cumplido la cobertura lógica marcada.}
+        \item En caso de terminar las pruebas, se pasa a la \uline{evaluación de los resultados obtenidos}. \textit{Se alcanza una terminación normal.}
+        \item En caso de no terminar las pruebas, se debe comprobar la presencia de condiciones anormales en la prueba.
+        \begin{itemize}
+            \item Si se hubiesen dado condiciones anormales (\textit{por ejemplo: no se han podido ejecutar todos los casos porque el sistema se cae regularmente}), se pasa de nuevo a la \uline{evaluación}; dicho de otro modo, las pruebas no se han pasado, pero no ha sido culpa del software. \textit{Se alcanza una terminación anormal}.
+            \item En caso contrario, se pasa a \uline{generar y ejecutar pruebas adicionales para satisfacer cualquiera de las dos posibles terminaciones} de las pruebas.
+        \end{itemize}
     \end{enumerate}
-    \item \textbf{Si las pruebas han terminado, se evalúan los resultados; en caso contario, hay que generar pruebas adicionales} para que se satisfagan los criterios de compleción de pruebas.
 \end{enumerate}
 
 \subsection{Documentación de la ejecución de las pruebas}
@@ -589,7 +593,7 @@ Además, tras corregir el efecto, \uline{deberán efectuarse nuevas pruebas que 
     \begin{itemize}
         \item Donde hay un defecto, suele haber más (\textit{ejemplo del Principio de Pareto}).
         \item Debe corregirse el defecto, en lugar de intentar enmascarar sus síntomas.
-        \item La probabilidad de corregir un defecto perfectamente no es el 100\%, por lo que las correciones deben ser revisadas antes de implatarlas.
+        \item La probabilidad de corregir un defecto perfectamente no es el 100\%, por lo que las correciones deben ser revisadas antes de implantarlas.
         \item Debe tenerse cuidado para no crear nuevos defectos como consecuencia de realizar correcciones sin cautela.
         \item La corrección debe situarnos temporalmente en la fase de diseño, para alterar el diseño correspondiente al código defectuoso.
     \end{itemize}
@@ -628,7 +632,7 @@ Las etapas de las que constaría la estragia serían:
     \item \textbf{Se comienza en la prueba de cada módulo}, realizada normalmente por el propio personal de desarrollo.
     \item Con el esquema del diseño del software, \textbf{los módulos probados se integran para comprobar sus interfaces}.
     \item \textbf{El software totalmente ensamblado se prueba como un conjunto} para comprobar si cumple o no tanto los requisitos funcionales como los requisitos de rendimientos, seguridad, etc. Este nivel \uline{coincide con la prueba del sistema cuando este solo se trata de software}.
-    \item El caso de que el sistema final conste de más que software, \textbf{el software ya validado se integra con el resto del sistema} (\textit{por ejemplo, elementos mecánicos}), \textbf{para probar su funcionamiento conjunto}. \textit{Por extensión, todavía es posible simular el hardware implicado en la anterior etapa. El resultado de esta fase es la certeza de haber hecho lo deseado, además de haberlo hecho bien.}
+    \item El caso de que el sistema final conste de más que software, \textbf{el software ya validado se integra con el resto del sistema} (\textit{por ejemplo: elementos mecánicos}), \textbf{para probar su funcionamiento conjunto}. \textit{Por extensión, todavía es posible simular el hardware implicado en la anterior etapa. El resultado de esta fase es la certeza de haber hecho lo deseado, además de haberlo hecho bien.}
     \item Finalmente, \textbf{el producto final se pasa a la prueba de aceptación para que el usuario compruebe, en su propio entorno de explotación, si lo acepta o no}. \textit{El resultado de esta fase es que el usuario tenga la certeza de recibir lo que él quería}.
 \end{enumerate}
 
@@ -646,12 +650,12 @@ Las técnicas y estrategias presentadas hasta el momento están inspiradas en la
 \subsection{Punto de vista del diseño de casos de pruebas}
 
 \begin{itemize}
-    \item \textbf{Técnicas de caja negra}: Siguen siendo completamente válidas. \textit{Por ejemplo, el AVL, el tratamiento de combinaciones de entrada, la conjetura de errores\ldots} Los casos de prueba deberían ser diseñados basándose en:
+    \item \textbf{Técnicas de caja negra}: Siguen siendo completamente válidas. \textit{Por ejemplo: el AVL, el tratamiento de combinaciones de entrada, la conjetura de errores\ldots} Los casos de prueba deberían ser diseñados basándose en:
           \begin{itemize}
               \item Los datos y eventos incluidos en los escenarios de los casos de uso.
               \item Los caminos que se pueden trazar en los diagramas de actividad, o en los de estados, que describan el caso de uso, sin olvidar todos los flujos alternativos, ni los tratamientos de errores y excepciones.
           \end{itemize}
-    \item \textbf{Técnicas de caja blanca}: Disminuyen sus posibilidades de aplicación, quedando confinadas a las instrucciones de cada método de cada clase. También cabría la posibilidad de aplicar la cobertura de caminos (incluido el criterio de \textit{McCabe}) no solo al código de los métodos, sino también a los diagramas de comportamiento con estructura de red; \textit{por ejemplo, diagramas de estados, de actividad, etc.}
+    \item \textbf{Técnicas de caja blanca}: Disminuyen sus posibilidades de aplicación, quedando confinadas a las instrucciones de cada método de cada clase. También cabría la posibilidad de aplicar la cobertura de caminos (incluido el criterio de \textit{McCabe}) no solo al código de los métodos, sino también a los diagramas de comportamiento con estructura de red; \textit{por ejemplo: diagramas de estados, de actividad, etc.}
 \end{itemize}
 
 En el caso del diseño de pruebas, cabe señalar además la posibilidad de \uline{distinguir criterios según el nivel de pruebas en el que se sitúe el diseño}. Así, para las pruebas de unidad (es decir, pruebas de clases), la prueba de clases de equivalencia y de AVL  son apropiadas aplicándolas a las entradas y salidas representadas como parámetros de métodos fundamentalmente. Sin embargo, \textbf{los cambios más radicales aparecen en las pruebas de integración}, dado que el enfoque de integración basado en la existencia de una estructura jerárquica no tiene sentido frente a las estructuras de colaboración en red definidas para el software \textit{OO}.\\
